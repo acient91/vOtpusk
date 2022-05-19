@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>вОтпуск | Фирменные поезда</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <script type="module" src="js/main.min.js" defer></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="images/logo-blue.png" alt="Логотип компании">
+          <span class="logo__text">ЖД билеты</span>
+        </a>
+        <div class="header__top">
+          <div class="header__search">
+            <input class="header__search-input" type="text" placeholder="Поиск по сайту">
+            <button class="header__search-btn" type="submit">Найти</button>
+          </div>
+          <div class="header__search--mobile">
+            <button class="header__search-btn--mobile" type="submit"></button>
+          </div>
+          <div class="header__users">
+            <div class="header__lk">
+              <a class="header__lk-link" href="#">
+                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.1075 12.1217C3.41397 13.5679 0 17.935 0 23.0917C0 23.5141 0.343467 23.8569 0.766667 23.8569C1.18987 23.8569 1.53333 23.5141 1.53333 23.0917C1.53333 17.6013 5.99917 13.144 11.5 13.144C17.0008 13.144 21.4667 17.6013 21.4667 23.0917C21.4667 23.5141 21.8101 23.8569 22.2333 23.8569C22.6565 23.8569 23 23.5141 23 23.0917C23 17.935 19.586 13.5679 14.8925 12.1217C16.5439 11.0252 17.6333 9.14966 17.6333 7.02239C17.6333 3.64401 14.8848 0.900757 11.5 0.900757C8.11517 0.900757 5.36667 3.64401 5.36667 7.02239C5.36667 9.14966 6.4561 11.0252 8.1075 12.1217ZM11.5 2.43116C14.0384 2.43116 16.1 4.4888 16.1 7.02239C16.1 9.55598 14.0384 11.6136 11.5 11.6136C8.96157 11.6136 6.9 9.55598 6.9 7.02239C6.9 4.4888 8.96157 2.43116 11.5 2.43116Z"
+                    fill="#000000" />
+                </svg>
+              </a>
+            </div>
+            <div class="header__modal">
+              <a class="header__modal-link" href="#">Тарифы</a>
+              <a class="header__modal-link" href="#">Аренда жилья</a>
+            </div>
+            <button class="header__btn"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="top">
+      <div class="container">
+        <div class="top__inner">
+          <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="index.html">Главная</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">ЖД Билеты</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <span class="breadcrumbs__link-lats">
+                  Фирменные поезда
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="top__buttons" style="display: none;">
+            <a class="top__buttons-btn top__buttons-btn--active" href="#timetable">Расписание</a>
+            <a class="top__buttons-ticket" href="tickets-buy.html" target="_blank">Купить билеты</a>
+            <a class="top__buttons-btn" href="#hotel">Отели</a>
+            <a class="top__buttons-btn" href="#transfer">Трансферы</a>
+            <a class="top__buttons-btn" href="#reviews">Отзывы</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="branded-search">
+      <div class="container">
+        <h1 class="branded-search__title title">
+          Поиск билетов на фирменные поезда
+        </h1>
+      </div>
+      <div class="branded-search__bg">
+        <div class="container">
+          <div class="branded-search__inner">
+            <div class="branded-search__search">
+              <form class="branded-search__form">
+                <div class="branded-search__box branded-search__box-train">
+                  <span class="branded-search__text">Название поезда</span>
+                  <input class="branded-search__input branded-search__input-train" type="text"
+                    placeholder="Название поезда">
+                </div>
+                <div class="branded-search__box branded-search__box-to">
+                  <span class="branded-search__text">Откуда</span>
+                  <input class="branded-search__input branded-search__input-to" type="text" placeholder="Откуда">
+                </div>
+                <div class="branded-search__box branded-search__box-where">
+                  <span class="branded-search__text">Куда</span>
+                  <input class="branded-search__input branded-search__input-where" type="text" placeholder="Куда">
+                </div>
+                <div class="branded-search__box branded-search__box-date">
+                  <span class="branded-search__text branded-search__text-date">Дата</span>
+                  <input class="branded-search__mobile-input branded-search__input--train-date" type="text"
+                    placeholder="Дата" autocomplete="off">
+                </div>
+                <button class="branded-search__btn">Найти</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="branded-train">
+      <div class="container">
+        <h3 class="branded-train__title title">Фирменные поезда</h3>
+        <div class="branded-train__text">
+          <p>
+            Расписание и график движения пассажирских поездов по станции МОСКВА БЕЛОРУССКАЯ с информацией о времени
+            прибытия и отправления поездов дальнего следования на всех станциях маршрута. Вы можете узнать о наличии и
+            стоимости билетов на поезда с отправлением от станции МОСКВА БЕЛОРУССКАЯ, а также при необходимости
+            забронировать их и купить.
+          </p>
+        </div>
+        <div class="branded-train__images">
+          <a class="branded-train__link" href="#">
+            <img class="branded-train__img" src="images/info2.png" alt="Поезд">
+            <div class="branded-train__box">
+              <span class="branded-train__brand">фирменный поезд</span>
+              <span class="branded-train__name title">Беларусь</span>
+            </div>
+          </a>
+          <a class="branded-train__link" href="#">
+            <img class="branded-train__img" src="images/info2.png" alt="Поезд">
+            <div class="branded-train__box">
+              <span class="branded-train__brand">фирменный поезд</span>
+              <span class="branded-train__name title">Беларусь</span>
+            </div>
+          </a>
+          <a class="branded-train__link" href="#">
+            <img class="branded-train__img" src="images/info2.png" alt="Поезд">
+            <div class="branded-train__box">
+              <span class="branded-train__brand">фирменный поезд</span>
+              <span class="branded-train__name title">Беларусь</span>
+            </div>
+          </a>
+          <a class="branded-train__link" href="#">
+            <img class="branded-train__img" src="images/info2.png" alt="Поезд">
+            <div class="branded-train__box">
+              <span class="branded-train__brand">фирменный поезд</span>
+              <span class="branded-train__name title">Беларусь</span>
+            </div>
+          </a>
+          <a class="branded-train__link" href="#">
+            <img class="branded-train__img" src="images/info2.png" alt="Поезд">
+            <div class="branded-train__box">
+              <span class="branded-train__brand">фирменный поезд</span>
+              <span class="branded-train__name title">Беларусь</span>
+            </div>
+          </a>
+          <a class="branded-train__link" href="#">
+            <img class="branded-train__img" src="images/info2.png"" alt=" Поезд">
+            <div class="branded-train__box">
+              <span class="branded-train__brand">фирменный
+                поезд</span>
+              <span class="branded-train__name title">Беларусь</span>
+            </div>
+          </a>
+          <a class="branded-train__link" href="#">
+            <img class="branded-train__img" src="images/info2.png" alt="Поезд">
+            <div class="branded-train__box">
+              <span class="branded-train__brand">фирменный
+                поезд</span>
+              <span class="branded-train__name title">Беларусь</span>
+            </div>
+          </a>
+          <a class="branded-train__link" href="#">
+            <img class="branded-train__img" src="images/info2.png" alt="Поезд">
+            <div class="branded-train__box">
+              <span class="branded-train__brand">фирменный
+                поезд</span>
+              <span class="branded-train__name title">Беларусь</span>
+            </div>
+          </a>
+          <a class="branded-train__link" href="#">
+            <img class="branded-train__img" src="images/info2.png" alt="Поезд">
+            <div class="branded-train__box">
+              <span class="branded-train__brand">фирменный
+                поезд</span>
+              <span class="branded-train__name title">Беларусь</span>
+            </div>
+          </a>
+        </div>
+        <div class="pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item">
+              <a class="pagination__link pagination__link--active" href="#">1</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">2</a>
+            </li>
+            <li class="pagination__item">
+              <a class="pagination__link" href="#">3</a>
+            </li>
+
+            <li class="pagination__item">
+              ...
+              <!-- <span class="pagination__still"></span> -->
+            </li>
+          </ul>
+          <a class="pagination__next" href="#">218</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <button class="scroll-top">
+      <img src="images/scroll-top.png" alt="стрелка вверх">
+    </button>
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__columns">
+          <div class="footer__column">
+            <h4 class="footer__title">Страны</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Абхазия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Венгрия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Грузия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Нидерланды</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Финляндия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Швейцария</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Австрия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Германия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Китай</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Словакия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Франция</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Эстония</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column footer__mobile">
+            <h4 class="footer__title">Города и курорты</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Амстердам</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Женева</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Куршавель</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Ницца</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Рига</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Хевиз</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Берлин</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Зальцбург</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Марсель</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Пекин</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Тбилиси</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Цюрих</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column footer__mobile">
+            <h4 class="footer__title">Сезоны</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Январь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Март</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Май</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Июль</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Сентябрь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Ноябрь</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Февраль</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Апрель</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Июнь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Август</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Октябрь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Декабрь</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column footer__mobile">
+            <h4 class="footer__title">Виды отдыха</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Пляжный отдых</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Экскурсионные туры</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Спорт. Активный отдых</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Свадебные туры</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Шоп туры</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Туры на праздник</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <img class="footer__counte" src="images/counter.jpg" alt="" loading="lazy">
+          <div class="footer__bottom-links">
+            <a class="footer__bottom-link" href="#">О проекте</a>
+            <a class="footer__bottom-link" href="#">Реклама на сайте</a>
+            <a class="footer__bottom-link" href="#">Промокоды</a>
+          </div>
+          <div class="footer__socials footer__mobile">
+            <a class="footer__social" href="#">
+              <img class="footer__social-icon" src="images/icons/vk.svg" alt="">
+            </a>
+            <a class="footer__social" href="#">
+              <svg class="footer__social-icon" width="35" height="35" viewBox="0 0 35 35"
+                xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path fill="#3B5995" d="M0 0h35v35h-35z" />
+                <path
+                  d="M18.726 25.018v-7.684h2.592l.385-3.008h-2.978v-1.916c0-.868.242-1.463 1.488-1.463h1.579v-2.682c-.768-.082-1.54-.122-2.313-.119-2.291 0-3.864 1.399-3.864 3.967v2.208h-2.575v3.009h2.581v7.689h3.105z"
+                  fill="#fff" /></svg>
+            </a>
+          </div>
+          <div class="footer__policy footer__mobile">
+            <p class="footer__policy-text">
+              Copyright 1999-2021 © "В ОТПУСК.РУ" Все права защищены
+            </p>
+            <p class="footer__policy-text">
+              При использовании материалов активная ссылка на сайт обязательна
+            </p>
+          </div>
+          <p class="footer__bottom-box footer__mobile">
+            <span class="footer__bottom-help">
+              Сообщить об ошибке:
+            </span>
+            <span class="footer__bottom-text">выделите неточность в тексте и нажмите</span>
+
+            <span class="footer__bottom-func">Ctrl+Enter</span>
+          </p>
+          <div class="footer__bottom-icons footer__mobile">
+            <svg class="footer__bottom-icon" width="45" height="30" viewBox="0 0 45 30"
+              xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path fill="#fff" stroke="#B3B4B6" stroke-width="2" d="M1 1h43v28h-43z" />
+              <path
+                d="M16.431 15.315l1.962.622c-.301 1.094-.802 1.907-1.504 2.44-.697.529-1.584.793-2.659.793-1.331 0-2.425-.453-3.281-1.36-.857-.911-1.285-2.156-1.285-3.732 0-1.668.431-2.962 1.292-3.883.861-.925 1.994-1.388 3.397-1.388 1.226 0 2.222.362 2.987 1.087.456.428.798 1.044 1.025 1.846l-2.003.479c-.119-.52-.367-.93-.745-1.23-.374-.301-.829-.451-1.367-.451-.743 0-1.347.267-1.812.8-.46.533-.691 1.397-.691 2.591 0 1.267.228 2.169.684 2.707.456.538 1.048.807 1.777.807.538 0 1-.171 1.388-.513.387-.342.665-.88.834-1.613zm7.02-3.575v1.531h-1.313v2.926c0 .592.011.939.034 1.039.027.096.084.175.171.239.091.064.2.096.328.096.178 0 .435-.062.772-.185l.164 1.49c-.447.191-.953.287-1.518.287-.346 0-.659-.057-.937-.171-.278-.119-.483-.269-.615-.451-.128-.187-.216-.438-.267-.752-.041-.223-.062-.674-.062-1.354v-3.165h-.882v-1.531h.882v-1.442l1.928-1.121v2.563h1.313zm3.172 7.26h-1.921v-7.26h1.784v1.032c.305-.488.579-.809.82-.964.246-.155.524-.232.834-.232.438 0 .859.121 1.265.362l-.595 1.675c-.324-.21-.624-.315-.902-.315-.269 0-.497.075-.684.226-.187.146-.335.412-.444.8-.105.387-.157 1.199-.157 2.434v2.242zm3.616 0v-10.021h1.921v10.021h-1.921z"
+                fill="#B3B4B6" /></svg>
+            <svg class="footer__bottom-icon" width="34" height="30" viewBox="0 0 34 30"
+              xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path d="M33 1h-16v6.462h-16v21.538h32v-28z" fill="#fff" stroke="#B3B4B6" stroke-width="2" />
+              <path
+                d="M25.299 19.615h-12.714l2.88 3.635-1.666 1.346-4.8-6.057 4.8-6.057 1.666 1.345-2.88 3.635h10.581v-6.462h2.133v8.615z"
+                fill="#B3B4B6" /></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+</body>
+
+</html>

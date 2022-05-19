@@ -1,0 +1,157 @@
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+body {
+  @extend %Roboto-400;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 19px;
+  color: $text;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+button {
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  outline: transparent;
+  padding: 0;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.title {
+  @extend %Roboto-900;
+  font-size: 30px;
+  line-height: 35px;
+  color: $text;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: flex-start;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    color: $link;
+    font-size: 16px;
+    line-height: 19px;
+    @extend %Roboto-400;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    padding-right: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      background-image: url('../images/Breadcrumbs.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &:last-child {
+      padding-right: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+
+  &__link-lats {
+    text-decoration: none;
+    color: #979797;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+  }
+
+  &__item {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #979797;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__link,
+  &__next {
+    display: block;
+    padding: 7px 11px;
+    transition: all .3s ease;
+    color: #979797;
+    background-color: $default;
+    font-size: 14px;
+    line-height: 16px;
+
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+      @extend %Roboto-700;
+    }
+  }
+
+  &__link--active {
+    background-color: $accent;
+    color: #fff;
+    @extend %Roboto-700;
+  }
+}
+
+// @media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+//   select:focus,
+//   textarea:focus,
+//   input:focus,
+//   ::placeholder {
+//     font-size: 16px;
+//   }
+// }

@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>вОтпуск | Станция</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+  <script type="module" src="js/main.min.js" defer></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="images/logo-blue.png" alt="Логотип компании">
+          <span class="logo__text">ЖД билеты</span>
+        </a>
+        <div class="header__top">
+          <div class="header__search">
+            <input class="header__search-input" type="text" placeholder="Поиск по сайту">
+            <button class="header__search-btn" type="submit">Найти</button>
+          </div>
+          <div class="header__search--mobile">
+            <button class="header__search-btn--mobile" type="submit"></button>
+          </div>
+          <div class="header__users">
+            <div class="header__lk">
+              <a class="header__lk-link" href="#">
+                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.1075 12.1217C3.41397 13.5679 0 17.935 0 23.0917C0 23.5141 0.343467 23.8569 0.766667 23.8569C1.18987 23.8569 1.53333 23.5141 1.53333 23.0917C1.53333 17.6013 5.99917 13.144 11.5 13.144C17.0008 13.144 21.4667 17.6013 21.4667 23.0917C21.4667 23.5141 21.8101 23.8569 22.2333 23.8569C22.6565 23.8569 23 23.5141 23 23.0917C23 17.935 19.586 13.5679 14.8925 12.1217C16.5439 11.0252 17.6333 9.14966 17.6333 7.02239C17.6333 3.64401 14.8848 0.900757 11.5 0.900757C8.11517 0.900757 5.36667 3.64401 5.36667 7.02239C5.36667 9.14966 6.4561 11.0252 8.1075 12.1217ZM11.5 2.43116C14.0384 2.43116 16.1 4.4888 16.1 7.02239C16.1 9.55598 14.0384 11.6136 11.5 11.6136C8.96157 11.6136 6.9 9.55598 6.9 7.02239C6.9 4.4888 8.96157 2.43116 11.5 2.43116Z"
+                    fill="#000000" />
+                </svg>
+              </a>
+            </div>
+            <div class="header__modal">
+              <a class="header__modal-link" href="#">Тарифы</a>
+              <a class="header__modal-link" href="#">Аренда жилья</a>
+            </div>
+            <button class="header__btn"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="train-content-two">
+
+      <section class="top">
+        <div class="container">
+          <div class="top__inner">
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="#">ЖД Билеты</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <span class="breadcrumbs__link-lats">
+                    Расписание: Белорусский вокзал
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <h1 class="top__title title">
+              Расписание: Белорусский вокзал
+            </h1>
+            <div class="top__text">
+              <p>
+                Расписание и график движения пассажирских поездов по станции МОСКВА БЕЛОРУССКАЯ с информацией о времени
+                прибытия и отправления поездов дальнего следования на всех станциях маршрута. Вы можете узнать о наличии
+                и
+                стоимости билетов на поезда с отправлением от станции МОСКВА БЕЛОРУССКАЯ, а также при необходимости
+                забронировать их и купить.
+              </p>
+            </div>
+            <div class="top__buttons">
+              <a class="top__buttons-btn top__buttons-btn--active" href="#timetable">Расписание</a>
+              <a class="top__buttons-ticket" href="tickets-buy.html" target="_blank">Купить билеты</a>
+              <a class="top__buttons-btn" href="#hotel">Отели</a>
+              <a class="top__buttons-btn" href="#transfer">Трансферы</a>
+              <a class="top__buttons-btn" href="#reviews">Отзывы</a>
+            </div>
+          </div>
+        </div>
+        <div class="search__wrapper">
+          <div class="search">
+            <div class="search__top">
+              <a class="search__top-item search__top-item--one" href="#">По
+                маршруту</a>
+              <a class="search__top-item search__top-item--active" href="#">По станции</a>
+              <a class="search__top-item" href="#">По № поезда</a>
+            </div>
+            <div class="search__inner">
+              <div class="container">
+                <div class="search__content">
+                  <div class="search__content-item search__content-item--active">
+                    <form class="search__content-desktop">
+                      <div class="search__content-box search__content-box--one">
+                        <span class="search__content-text search__content-text--one">Откуда</span>
+                        <input class="search__content-input search__content-input--one" type="text"
+                          placeholder="Откуда едете?">
+                        <button class="search__content-swap btn-swap"></button>
+                      </div>
+                      <div class="search__content-box search__content-box--where">
+                        <span class="search__content-text search__content-text--where">Куда</span>
+                        <input class="search__content-input search__content-input--where" type="text"
+                          placeholder="Куда едете?">
+                      </div>
+                      <label class="search__mobile-label--date">
+                        <input class="search__mobile-route--input " type="text" placeholder="Выберите дату">
+                      </label>
+                      <div class="search__content-box search__content-box--day">
+                        <span class="search__content-text 
+                    search__content-text--day">День</span>
+                        <select class="search__content-select--day select-style">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31">31</option>
+                        </select>
+                      </div>
+                      <div class="search__content-box search__content-box--month">
+                        <span class="search__content-text search__content-text--month">Месяц</span>
+                        <select class="search__content-select--month select-style">
+                          <option value="Января">Января</option>
+                          <option value="Февраля">Февраля</option>
+                          <option value="Марта">Марта</option>
+                          <option value="Апреля">Апреля</option>
+                          <option value="Мая">Мая</option>
+                          <option value="Июня">Июня</option>
+                          <option value="Июля">Июля</option>
+                          <option value="Августа">Августа</option>
+                          <option value="Сентября">Сентября</option>
+                          <option value="Октября">Октября</option>
+                          <option value="Ноября">Ноября</option>
+                          <option value="Декабря">Декабря</option>
+                        </select>
+                      </div>
+                      <div class="search__content-box search__content-box--year">
+                        <span class="search__content-text search__content-text--year">Год</span>
+                        <select class="search__content-select--year select-style">
+                          <option value="2022">2022</option>
+                          <option value="2023">2023</option>
+                        </select>
+                      </div>
+                      <button class="search__content-btn">Найти</button>
+                    </form>
+                  </div>
+                  <div class="search__content-item">
+                    <form class="search__content-desktop">
+                      <div class="search__content-box search__content-box--station">
+                        <span class="search__content-text search__content-text--one">Станция</span>
+                        <input class="search__content-input search__content-input--station" type="text"
+                          placeholder="Введите станцию">
+                        <button class="search__content-swap btn-swap"></button>
+                      </div>
+                      <label class="search__mobile-label--date">
+                        <input class="search__mobile-station--input" type="text" placeholder="Выберите дату">
+                      </label>
+                      <div class="search__content-box search__content-box--day">
+                        <span class="search__content-text search__content-text--day">День</span>
+                        <select class="search__content-select--day search__content-select--day-mobile select-style">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31">31</option>
+                        </select>
+                      </div>
+                      <div class="search__content-box search__content-box--month">
+                        <span class="search__content-text search__content-text--month">Месяц</span>
+                        <select
+                          class="search__content-select--month search__content-select--month-mobile  select-style">
+                          <option value="Января">Января</option>
+                          <option value="Февраля">Февраля</option>
+                          <option value="Марта">Марта</option>
+                          <option value="Апреля">Апреля</option>
+                          <option value="Мая">Мая</option>
+                          <option value="Июня">Июня</option>
+                          <option value="Июля">Июля</option>
+                          <option value="Августа">Августа</option>
+                          <option value="Сентября">Сентября</option>
+                          <option value="Октября">Октября</option>
+                          <option value="Ноября">Ноября</option>
+                          <option value="Декабря">Декабря</option>
+                        </select>
+                      </div>
+                      <div class="search__content-box search__content-box--year">
+                        <span class="search__content-text search__content-text--year">Год</span>
+                        <select class="search__content-select--year  search__content-select--year-mobile select-style">
+                          <option value="2022">2022</option>
+                          <option value="2023">2023</option>
+                        </select>
+                      </div>
+                      <button class="search__content-btn">Найти</button>
+                    </form>
+                  </div>
+                  <div class="search__content-item">
+                    <form class="search__train-content">
+                      <div class="search__content-box search__content-box--train">
+                        <button class="search__content-swap"></button>
+                        <span
+                          class="search__content-text search__content-text--one search__content-text--train">№Поезда</span>
+                        <input
+                          class="search__content-input search__content-input--train search__content-input--train-mobile"
+                          type="text" placeholder="Введите №Поезда">
+                      </div>
+                      <button class="search__content-btn">Найти</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="timetable" id="timetable">
+        <div class="container">
+          <div class="timetable__buttons">
+            <button class="timetable__btn timetable__btn--active">Поезда</button>
+            <button class="timetable__btn">Электрички</button>
+          </div>
+          <div class="timetable__inner timetable__inner--active">
+            <h2 class="timetable__title title">
+              Расписание пассажирских и скорых поездов
+            </h2>
+            <ul class="timetable__links">
+              <li class="timetable__links-item timetable__links-item--active">
+                <a class="timetable__links-link" href="#">
+                  4.12.2021
+                </a>
+              </li>
+              <li class="timetable__links-item">
+                <a class="timetable__links-link" href="#">
+                  5.12.2021
+                </a>
+              </li>
+              <li class="timetable__links-item">
+                <a class="timetable__links-link" href="#">
+                  6.12.2021
+                </a>
+              </li>
+              <li class="timetable__links-item">
+                <a class="timetable__links-link" href="#">
+                  7.12.2021
+                </a>
+              </li>
+              <li class="timetable__links-item">
+                <a class="timetable__links-link" href="#">
+                  8.12.2021
+                </a>
+              </li>
+            </ul>
+            <ul class="timetable__list">
+              <div class="timetable__text-box">
+                <span class="timetable__text">Отправление</span>
+                <span class="timetable__text">В пути</span>
+                <span class="timetable__text">Прибытие</span>
+              </div>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        533М
+                      </span>
+                      <span>
+                        Москва Павелецкая — Адлер
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">пассажирский</span>
+                      <a class="timetable__train-link" href="#">график курсирования</a>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">0:55</span>
+                      <span class="timetable__time-all">13ч 25м</span>
+                      <span class="timetable__time-end">14:20</span>
+                    </div>
+                    <button class="timetable__time-btn">Купить билет</button>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        259А
+                      </span>
+                      <span>
+                        Санкт-Петербург-Московский — Анапа
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <a class="timetable__train-link" href="#">график курсирования</a>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">1:14</span>
+                      <span class="timetable__time-all">13ч 25м</span>
+                      <span class="timetable__time-end">15:13</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        293А
+                      </span>
+                      <span>
+                        Мурманск — Анапа
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <a class="timetable__train-link" href="#">график курсирования</a>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">2:47</span>
+                      <span class="timetable__time-all">13ч 25м</span>
+                      <span class="timetable__time-end">16:46</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        042Ч
+                      </span>
+                      <span>
+                        Новгород-На-Волхове — Москва Октябрьская
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <span class="timetable__train-link timetable__train-link--all">ежедневно</span>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">0:55</span>
+                      <span class="timetable__time-all">13ч 25м</span>
+                      <span class="timetable__time-end">14:20</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        135А
+                      </span>
+                      <span>
+                        Санкт-Петербург-Московский — Махачкала
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <a class="timetable__train-link" href="#">график
+                        курсирования</a>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">4:12</span>
+                      <span class="timetable__time-all">13ч 25м</span>
+                      <span class="timetable__time-end">18:43</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        251А
+                      </span>
+                      <span>
+                        Санкт-Петербург-Московский — Владикавказ
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <a class="timetable__train-link" href="#">график курсирования</a>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">5:32</span>
+                      <span class="timetable__time-all">13ч
+                        25м</span>
+                      <span class="timetable__time-end">19:56</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        023Г
+                      </span>
+                      <span>
+                        Казань Пассажирская — Москва Казанская
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <span class="timetable__train-link timetable__train-link--all">ежедневно</span>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">0:55</span>
+                      <span class="timetable__time-all">13ч
+                        25м</span>
+                      <span class="timetable__time-end">14:20</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        010Ч
+                      </span>
+                      <span>
+                        Псков Пассажирский — Москва Октябрьская
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">
+                        скорый (фирменный)
+                      </span>
+                      <span class="timetable__train-link timetable__train-link--all">ежедневно</span>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">7:29</span>
+                      <span class="timetable__time-all">13ч
+                        25м</span>
+                      <span class="timetable__time-end">21:53</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="timetable__inner">
+            <h2 class="timetable__title title">
+              Расписание пассажирских и электричек
+            </h2>
+            <ul class="timetable__links">
+              <li class="timetable__links-item timetable__links-item--active">
+                <a class="timetable__links-link" href="#">
+                  4.12.2021
+                </a>
+              </li>
+              <li class="timetable__links-item">
+                <a class="timetable__links-link" href="#">
+                  5.12.2021
+                </a>
+              </li>
+              <li class="timetable__links-item">
+                <a class="timetable__links-link" href="#">
+                  6.12.2021
+                </a>
+              </li>
+              <li class="timetable__links-item">
+                <a class="timetable__links-link" href="#">
+                  7.12.2021
+                </a>
+              </li>
+              <li class="timetable__links-item">
+                <a class="timetable__links-link" href="#">
+                  8.12.2021
+                </a>
+              </li>
+            </ul>
+            <ul class="timetable__list">
+              <div class="timetable__text-box">
+                <span class="timetable__text">Отправление</span>
+                <span class="timetable__text">В пути</span>
+                <span class="timetable__text">Прибытие</span>
+              </div>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        533М
+                      </span>
+                      <span>
+                        Москва Павелецкая — Адлер
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">пассажирский</span>
+                      <a class="timetable__train-link" href="#">график курсирования</a>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">0:55</span>
+                      <span class="timetable__time-all">13ч 25м</span>
+                      <span class="timetable__time-end">14:20</span>
+                    </div>
+                    <button class="timetable__time-btn">Купить билет</button>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        259А
+                      </span>
+                      <span>
+                        Санкт-Петербург-Московский — Анапа
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <a class="timetable__train-link" href="#">график курсирования</a>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">1:14</span>
+                      <span class="timetable__time-all">13ч 25м</span>
+                      <span class="timetable__time-end">15:13</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        293А
+                      </span>
+                      <span>
+                        Мурманск — Анапа
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <a class="timetable__train-link" href="#">график курсирования</a>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">2:47</span>
+                      <span class="timetable__time-all">13ч 25м</span>
+                      <span class="timetable__time-end">16:46</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        042Ч
+                      </span>
+                      <span>
+                        Новгород-На-Волхове — Москва Октябрьская
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <span class="timetable__train-link timetable__train-link--all">ежедневно</span>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">0:55</span>
+                      <span class="timetable__time-all">13ч 25м</span>
+                      <span class="timetable__time-end">14:20</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        135А
+                      </span>
+                      <span>
+                        Санкт-Петербург-Московский — Махачкала
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <a class="timetable__train-link" href="#">график
+                        курсирования</a>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">4:12</span>
+                      <span class="timetable__time-all">13ч 25м</span>
+                      <span class="timetable__time-end">18:43</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        251А
+                      </span>
+                      <span>
+                        Санкт-Петербург-Московский — Владикавказ
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <a class="timetable__train-link" href="#">график курсирования</a>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">5:32</span>
+                      <span class="timetable__time-all">13ч
+                        25м</span>
+                      <span class="timetable__time-end">19:56</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        023Г
+                      </span>
+                      <span>
+                        Казань Пассажирская — Москва Казанская
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">скорый</span>
+                      <span class="timetable__train-link timetable__train-link--all">ежедневно</span>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">0:55</span>
+                      <span class="timetable__time-all">13ч
+                        25м</span>
+                      <span class="timetable__time-end">14:20</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+              <li class="timetable__item">
+                <div class="timetable__box">
+                  <div class="timetable__train">
+                    <div class="timetable__train-number">
+                      <span class="timetable__train-num">
+                        010Ч
+                      </span>
+                      <span>
+                        Псков Пассажирский — Москва Октябрьская
+                      </span>
+                    </div>
+                    <div class="timetable__train-box">
+                      <span class="timetable__train-type">
+                        скорый (фирменный)
+                      </span>
+                      <span class="timetable__train-link timetable__train-link--all">ежедневно</span>
+                    </div>
+                  </div>
+                  <div class="timetable__time">
+                    <div class="timetable__time-box">
+                      <span class="timetable__time-start">7:29</span>
+                      <span class="timetable__time-all">13ч
+                        25м</span>
+                      <span class="timetable__time-end">21:53</span>
+                    </div>
+                    <a class="timetable__time-btn" href="#">Купить
+                      билет</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="hotel" id="hotel">
+        <div class="container">
+          <div class="hotel__inner">
+            <h2 class="hotel__title title">Отели <span class="hotel__subtitle">Москвы</span></h2>
+
+            <ul class="hotel__list">
+              <li class="hotel__item">
+                <div class="hotel__slider-wrapper">
+                  <div class="hotel__slider">
+                    <div class="swiper-wrapper hotel__item-img">
+                      <img class="swiper-slide hotel__img" src="images/hotel/1.png" alt="Картинка отеля">
+                      <img class="swiper-slide hotel__img" src="images/direct2.png" alt="Картинка отеля">
+                      <img class="swiper-slide hotel__img" src="images/hotel/1.png" alt="Картинка отеля">
+                      <img class="swiper-slide hotel__img" src="images/direct2.png" alt="Картинка отеля">
+                    </div>
+                  </div>
+                  <button class="hotel__btn-prev hotel__btn">
+                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.3 16.75L1 8.875L7.3 0.999999" stroke="#F8991D" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="hotel__btn-next hotel__btn">
+                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.7 16.75L8 8.875L1.7 0.999999" stroke="#F8991D" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="hotel__item-content">
+                  <div class="hotel__info">
+                    <div class="hotel__info-box">
+                      <h3 class="hotel__info-title">Plus Florence</h3>
+                      <div class="hotel__info-star" data-rateyo-rating="3"></div>
+                    </div>
+                    <ul class="hotel__info-list">
+                      <li class="hotel__info-servis hotel__info-servis--conditioner">Кондиционер</li>
+                      <li class="hotel__info-servis hotel__info-servis--wifi">Бесплатный Wi-Fi</li>
+                      <li class="hotel__info-servis hotel__info-servis--bar">Бар</li>
+                      <li class="hotel__info-servis hotel__info-servis--rest">Ресторан</li>
+                      <li class="hotel__info-servis hotel__info-servis--spa">Спа и оздоровительный центр</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="hotel__price">
+                  <span class="hotel__price-text">Отель</span>
+                  <span class="hotel__price-num">от 76 546 руб</span>
+                  <a class="hotel__price-link" href="#">Посмотреть</a>
+                </div>
+              </li>
+              <li class="hotel__item">
+                <div class="hotel__slider-wrapper">
+                  <div class="hotel__slider-two">
+                    <div class="swiper-wrapper hotel__item-img">
+                      <img class="swiper-slide hotel__img" src="images/hotel/1.png" alt="Картинка отеля">
+                      <img class="swiper-slide hotel__img" src="images/direct2.png" alt="Картинка отеля">
+                      <img class="swiper-slide hotel__img" src="images/hotel/1.png" alt="Картинка отеля">
+                      <img class="swiper-slide hotel__img" src="images/direct2.png" alt="Картинка отеля">
+                    </div>
+                  </div>
+                  <button class="hotel__btn-prev-two hotel__btn">
+                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.3 16.75L1 8.875L7.3 0.999999" stroke="#F8991D" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="hotel__btn-next-two hotel__btn">
+                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.7 16.75L8 8.875L1.7 0.999999" stroke="#F8991D" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="hotel__item-content">
+                  <div class="hotel__info">
+                    <div class="hotel__info-box">
+                      <h3 class="hotel__info-title">Plus Florence</h3>
+                      <div class="hotel__info-star" data-rateyo-rating="3"></div>
+                    </div>
+                    <ul class="hotel__info-list">
+                      <li class="hotel__info-servis hotel__info-servis--conditioner">Кондиционер</li>
+                      <li class="hotel__info-servis hotel__info-servis--wifi">Бесплатный Wi-Fi</li>
+                      <li class="hotel__info-servis hotel__info-servis--bar">Бар</li>
+                      <li class="hotel__info-servis hotel__info-servis--rest">Ресторан</li>
+                      <li class="hotel__info-servis hotel__info-servis--spa">Спа и оздоровительный центр</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="hotel__price">
+                  <span class="hotel__price-text">Отель</span>
+                  <span class="hotel__price-num">от 76 546 руб</span>
+                  <a class="hotel__price-link" href="#">Посмотреть</a>
+                </div>
+              </li>
+              <li class="hotel__item">
+                <div class="hotel__slider-wrapper">
+                  <div class="hotel__slider-three">
+                    <div class="swiper-wrapper hotel__item-img">
+                      <img class="swiper-slide hotel__img" src="images/hotel/1.png" alt="Картинка отеля">
+                      <img class="swiper-slide hotel__img" src="images/direct2.png" alt="Картинка отеля">
+                      <img class="swiper-slide hotel__img" src="images/hotel/1.png" alt="Картинка отеля">
+                      <img class="swiper-slide hotel__img" src="images/direct2.png" alt="Картинка отеля">
+                    </div>
+                  </div>
+                  <button class="hotel__btn-prev-three hotel__btn">
+                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.3 16.75L1 8.875L7.3 0.999999" stroke="#F8991D" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button class="hotel__btn-next-three hotel__btn">
+                    <svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.7 16.75L8 8.875L1.7 0.999999" stroke="#F8991D" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="hotel__item-content">
+                  <div class="hotel__info">
+                    <div class="hotel__info-box">
+                      <h3 class="hotel__info-title">Plus Florence</h3>
+                      <div class="hotel__info-star" data-rateyo-rating="4"></div>
+                    </div>
+                    <ul class="hotel__info-list">
+                      <li class="hotel__info-servis hotel__info-servis--conditioner">Кондиционер</li>
+                      <li class="hotel__info-servis hotel__info-servis--wifi">Бесплатный Wi-Fi</li>
+                      <li class="hotel__info-servis hotel__info-servis--bar">Бар</li>
+                      <li class="hotel__info-servis hotel__info-servis--rest">Ресторан</li>
+                      <li class="hotel__info-servis hotel__info-servis--spa">Спа и оздоровительный центр</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="hotel__price">
+                  <span class="hotel__price-text">Отель</span>
+                  <span class="hotel__price-num">от 76 546 руб</span>
+                  <a class="hotel__price-link" href="#">Посмотреть</a>
+                </div>
+              </li>
+              <a class="hotel__link" href="#">Показать все отели</a>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="transfer" id="transfer">
+        <div class="container">
+          <div class="transfer__search">
+            <h3 class="transfer__search-title title">Трансферы из Белорусского вокзала</h3>
+            <div class="transfer__search-wrapper">
+              <div class="transfer__search-box">
+                <span class="transfer__search-text">Откуда</span>
+                <input class="transfer__search-input transfer__search-input--one" type="text"
+                  placeholder="Аэропорт, город, вокзал">
+              </div>
+              <div class="transfer__search-box  transfer__search-box--two">
+                <span class="transfer__search-text transfer__search-text--two">Куда</span>
+                <input class="transfer__search-input  transfer__search-input--two" type="text"
+                  placeholder="Аэропорт, город, вокзал">
+                <button class="transfer__search-swipe"></button>
+              </div>
+              <button class="transfer__search-btn">Найти</button>
+            </div>
+            <ul class="transfer__search-services">
+              <li class="transfer__search-item transfer__search-item--free">
+                Бесплатная отмена заказа
+              </li>
+              <li class="transfer__search-item transfer__search-item--hour">
+                1 час ожидания в аэропорту включен
+              </li>
+              <li class="transfer__search-item transfer__search-item--time">
+                Круглосутчная служба поддержки
+              </li>
+            </ul>
+          </div>
+          <div class="transfer__station">
+            <h3 class="transfer__station-title title">Вокзал на карте</h2>
+              <div class="transfer__station-map">
+                <img src="images/map.png" alt="Карта">
+              </div>
+              <h3 class="transfer__station-subtitle title">Фото вокзала</h3>
+              <ul class="transfer__station-list">
+                <li class="transfer__station-item">
+                  <img class="transfer__station-image" src="images/station/1.png" alt="Фото вокзала">
+                </li>
+                <li class="transfer__station-item">
+                  <img class="transfer__station-image" src="images/station/2.png" alt="Фото вокзала">
+                </li>
+                <li class="transfer__station-item">
+                  <img class="transfer__station-image" src="images/station/3.png" alt="Фото вокзала">
+                </li>
+              </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="train-reviews" id="reviews">
+        <div class="container">
+          <div class="train-reviews__wrapper">
+            <div class="train-reviews__inner">
+              <div class="modal-overlay"></div>
+              <div class="modal">
+                <button class="modal__close">+</button>
+                <div class="modal__inner">
+                  <h4 class="modal__title">Оставить отзыв</h4>
+                  <form class="modal__form">
+                    <div class="modal__form-star"></div>
+                    <input type="text" class="modal__form-input" placeholder="Ваше имя*">
+                    <textarea class="modal__form-textarea" placeholder="Ваш текст*"></textarea>
+                    <div class="modal__form-captcha">
+                      <img class="modal__form-captcha-img" src="" alt="введите код с картинки">
+                      <input class="modal__form-captcha-input" type="text">
+                    </div>
+                    <button class="modal__form-btn" type="submit">Разместить</button>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-sendcomment">
+                <button class="modal-sendcomment__close">+</button>
+                <h4 class="modal-sendcomment__title">Премного благодарны :)</h4>
+                <div class="modal-sendcomment__text">
+                  Ваш отзыв очень важен для нас и будет размещен на сервисе в самое
+                  ближайшее время!
+                </div>
+                <button class="modal-sendcomment__end">Хорошо</button>
+              </div>
+              <h2 class="train-reviews__title title">Отзывы</h2>
+              <span class="train-reviews__not-reviews">
+                Оставьте отзыв и он будет первым!
+              </span>
+              <button class="train-reviews__btn">Написать отзыв</button>
+            </div>
+            <ul class="train-reviews__list">
+              <li class="train-reviews__item">
+                <div class="train-reviews__avatar">
+                  <img class="train-reviews__img" src="images/review/avatar1.png" alt="Аватар">
+                  <div class="train-reviews__box">
+                    <span class="train-reviews__name">Наташа</span>
+                    <span class="train-reviews__date">10.11.2021</span>
+                  </div>
+                  <div class="train-reviews__star" data-rateyo-rating="4"></div>
+                  <span class="train-reviews__star-num">5</span>
+                </div>
+                <div class="train-reviews__bottom">
+                  <div class="train-reviews__text">
+                    <p>
+                      Чем понравился сервис оперативно, четко, легко разобраться. Я вообще люблю, когда все варианты в
+                      одном
+                      месте. Искала недорогой хостел для летнего отпуска.. Выбирала минут 10 и забронила чудесную
+                      комнат))
+                    </p>
+                    <button class="train-reviews__answer">Ответить</button>
+                  </div>
+                </div>
+              </li>
+              <li class="train-reviews__item">
+                <div class="train-reviews__avatar">
+                  <img class="train-reviews__img" src="images/review/avatar1.png" alt="Аватар">
+                  <div class="train-reviews__box">
+                    <span class="train-reviews__name">Наташа</span>
+                    <span class="train-reviews__date">10.11.2021</span>
+                  </div>
+                  <div class="train-reviews__star" data-rateyo-rating="5"></div>
+                  <span class="train-reviews__star-num">5</span>
+                </div>
+                <div class="train-reviews__bottom">
+                  <div class="train-reviews__text">
+                    <p>
+                      Чем понравился сервис оперативно, четко, легко разобраться. Я вообще люблю, когда все варианты
+                      в одном
+                      месте. Искала недорогой хостел для летнего отпуска.. Выбирала минут 10 и забронила чудесную
+                      комнат))
+                    </p>
+                    <button class="train-reviews__answer">Ответить</button>
+                  </div>
+                </div>
+              </li>
+              <li class="train-reviews__item">
+                <div class="train-reviews__avatar">
+                  <img class="train-reviews__img" src="images/review/avatar1.png" alt="Аватар">
+                  <div class="train-reviews__box">
+                    <span class="train-reviews__name">Наташа</span>
+                    <span class="train-reviews__date">10.11.2021</span>
+                  </div>
+                  <div class="train-reviews__star" data-rateyo-rating="5"></div>
+                  <span class="train-reviews__star-num">5</span>
+                </div>
+                <div class="train-reviews__bottom">
+                  <div class="train-reviews__text">
+                    <p>
+                      Чем понравился сервис оперативно, четко, легко разобраться. Я вообще люблю, когда
+                      все варианты в одном
+                      месте. Искала недорогой хостел для летнего отпуска.. Выбирала минут 10 и забронила
+                      чудесную комнат))
+                    </p>
+                    <button class="train-reviews__answer">Ответить</button>
+                  </div>
+                </div>
+              </li>
+              <button class="train-reviews__still">Показать ещё</button>
+            </ul>
+            <div class="train-reviews__info">
+              <p>
+                Расписание и график движения пассажирских поездов по станции МОСКВА БЕЛОРУССКАЯ с информацией о
+                времени
+                прибытия и
+                отправления поездов дальнего следования на всех станциях маршрута. Вы можете узнать о наличии и
+                стоимости
+                билетов на
+                поезда с отправлением от станции МОСКВА БЕЛОРУССКАЯ, а также при необходимости забронировать их и
+                купить.
+                Расписание и
+                график движения пассажирских поездов по станции МОСКВА БЕЛОРУССКАЯ с информацией о времени
+                прибытия и
+                отправления
+                поездов дальнего следования на всех станциях маршрута. Вы можете узнать о наличии и стоимости
+                билетов на
+                поезда с
+                отправлением от станции МОСКВА БЕЛОРУССКАЯ, а также при необходимости забронировать их и купить.
+                Расписание и график
+                движения пассажирских поездов по станции МОСКВА БЕЛОРУССКАЯ с информацией о времени прибытия и
+                отправления
+                поездов
+                дальнего следования на всех станциях маршрута. Вы можете узнать о наличии и стоимости билетов на
+                поезда
+                с
+                отправлением
+                от станции МОСКВА БЕЛОРУССКАЯ, а также при необходимости забронировать их и купить.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <button class="scroll-top">
+      <img src="images/scroll-top.png" alt="стрелка вверх">
+    </button>
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__columns">
+          <div class="footer__column">
+            <h4 class="footer__title">Страны</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Абхазия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Венгрия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Грузия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Нидерланды</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Финляндия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Швейцария</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Австрия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Германия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Китай</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Словакия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Франция</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Эстония</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column footer__mobile">
+            <h4 class="footer__title">Города и курорты</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Амстердам</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Женева</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Куршавель</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Ницца</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Рига</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Хевиз</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Берлин</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Зальцбург</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Марсель</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Пекин</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Тбилиси</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Цюрих</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column footer__mobile">
+            <h4 class="footer__title">Сезоны</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Январь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Март</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Май</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Июль</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Сентябрь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Ноябрь</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Февраль</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Апрель</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Июнь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Август</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Октябрь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Декабрь</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column footer__mobile">
+            <h4 class="footer__title">Виды отдыха</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Пляжный отдых</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Экскурсионные туры</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Спорт. Активный отдых</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Свадебные туры</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Шоп туры</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Туры на праздник</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <img class="footer__counte" src="images/counter.jpg" alt="" loading="lazy">
+          <div class="footer__bottom-links">
+            <a class="footer__bottom-link" href="#">О проекте</a>
+            <a class="footer__bottom-link" href="#">Реклама на сайте</a>
+            <a class="footer__bottom-link" href="#">Промокоды</a>
+          </div>
+          <div class="footer__socials footer__mobile">
+            <a class="footer__social" href="#">
+              <img class="footer__social-icon" src="images/icons/vk.svg" alt="">
+            </a>
+            <a class="footer__social" href="#">
+              <svg class="footer__social-icon" width="35" height="35" viewBox="0 0 35 35"
+                xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path fill="#3B5995" d="M0 0h35v35h-35z" />
+                <path
+                  d="M18.726 25.018v-7.684h2.592l.385-3.008h-2.978v-1.916c0-.868.242-1.463 1.488-1.463h1.579v-2.682c-.768-.082-1.54-.122-2.313-.119-2.291 0-3.864 1.399-3.864 3.967v2.208h-2.575v3.009h2.581v7.689h3.105z"
+                  fill="#fff" /></svg>
+            </a>
+          </div>
+          <div class="footer__policy footer__mobile">
+            <p class="footer__policy-text">
+              Copyright 1999-2021 © "В ОТПУСК.РУ" Все права защищены
+            </p>
+            <p class="footer__policy-text">
+              При использовании материалов активная ссылка на сайт обязательна
+            </p>
+          </div>
+          <p class="footer__bottom-box footer__mobile">
+            <span class="footer__bottom-help">
+              Сообщить об ошибке:
+            </span>
+            <span class="footer__bottom-text">выделите неточность в тексте и нажмите</span>
+
+            <span class="footer__bottom-func">Ctrl+Enter</span>
+          </p>
+          <div class="footer__bottom-icons footer__mobile">
+            <svg class="footer__bottom-icon" width="45" height="30" viewBox="0 0 45 30"
+              xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path fill="#fff" stroke="#B3B4B6" stroke-width="2" d="M1 1h43v28h-43z" />
+              <path
+                d="M16.431 15.315l1.962.622c-.301 1.094-.802 1.907-1.504 2.44-.697.529-1.584.793-2.659.793-1.331 0-2.425-.453-3.281-1.36-.857-.911-1.285-2.156-1.285-3.732 0-1.668.431-2.962 1.292-3.883.861-.925 1.994-1.388 3.397-1.388 1.226 0 2.222.362 2.987 1.087.456.428.798 1.044 1.025 1.846l-2.003.479c-.119-.52-.367-.93-.745-1.23-.374-.301-.829-.451-1.367-.451-.743 0-1.347.267-1.812.8-.46.533-.691 1.397-.691 2.591 0 1.267.228 2.169.684 2.707.456.538 1.048.807 1.777.807.538 0 1-.171 1.388-.513.387-.342.665-.88.834-1.613zm7.02-3.575v1.531h-1.313v2.926c0 .592.011.939.034 1.039.027.096.084.175.171.239.091.064.2.096.328.096.178 0 .435-.062.772-.185l.164 1.49c-.447.191-.953.287-1.518.287-.346 0-.659-.057-.937-.171-.278-.119-.483-.269-.615-.451-.128-.187-.216-.438-.267-.752-.041-.223-.062-.674-.062-1.354v-3.165h-.882v-1.531h.882v-1.442l1.928-1.121v2.563h1.313zm3.172 7.26h-1.921v-7.26h1.784v1.032c.305-.488.579-.809.82-.964.246-.155.524-.232.834-.232.438 0 .859.121 1.265.362l-.595 1.675c-.324-.21-.624-.315-.902-.315-.269 0-.497.075-.684.226-.187.146-.335.412-.444.8-.105.387-.157 1.199-.157 2.434v2.242zm3.616 0v-10.021h1.921v10.021h-1.921z"
+                fill="#B3B4B6" /></svg>
+            <svg class="footer__bottom-icon" width="34" height="30" viewBox="0 0 34 30"
+              xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path d="M33 1h-16v6.462h-16v21.538h32v-28z" fill="#fff" stroke="#B3B4B6" stroke-width="2" />
+              <path
+                d="M25.299 19.615h-12.714l2.88 3.635-1.666 1.346-4.8-6.057 4.8-6.057 1.666 1.345-2.88 3.635h10.581v-6.462h2.133v8.615z"
+                fill="#B3B4B6" /></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+.train-reviews {
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  padding-bottom: 80px;
+
+  @include for-1025-px {
+    padding-bottom: 70px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 38px;
+    position: relative;
+
+    @include for-1025-px {
+      margin-bottom: 30px;
+    }
+
+    @include for-769-px {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 0;
+
+    @include for-769-px {
+      font-size: 25px;
+      line-height: 29px;
+    }
+  }
+
+  &__not-reviews {
+    display: none;
+  }
+
+  &__btn {
+    padding: 16px;
+    max-width: 200px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $accent;
+    color: #ffffff;
+    @extend %Roboto-700;
+    text-transform: uppercase;
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+      max-width: 166px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__item {
+    background-color: #FFF8EE;
+    border-radius: 0 50px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  &__avatar {
+    padding: 30px 30px 10px 30px;
+    display: flex;
+    align-items: center;
+
+    @include for-470-px {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+
+    @include for-470-px {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+
+    @include for-470-px {
+      margin-right: 44px;
+    }
+
+    @include for-440-px {
+      margin-right: 20px;
+    }
+
+    @include for-321-px {
+      margin-right: 0;
+    }
+  }
+
+  &__name {
+    @extend %Roboto-700;
+    margin-right: 35px;
+
+    @include for-769-px {
+      margin-right: 20px;
+    }
+
+    @include for-440-px {
+      margin-right: 20px;
+    }
+  }
+
+  &__date {
+    font-size: 16px;
+    line-height: 19px;
+    color: #979797;
+    margin-right: 25px;
+    margin-top: 4px;
+    display: none;
+
+    @include for-1025-px {
+      display: block;
+    }
+
+    @include for-470-px {
+      margin-right: 0;
+    }
+  }
+
+  &__star {
+    margin-right: 10px;
+    display: none;
+
+    @include for-1025-px {
+      display: block;
+    }
+  }
+
+  &__star-num {
+    @extend %Roboto-700;
+    margin-top: 4px;
+    display: none;
+
+    @include for-1025-px {
+      display: flex;
+    }
+  }
+
+  &__bottom {
+    @include for-1025-px {
+      background-color: $default;
+    }
+  }
+
+  &__text {
+    @extend %Roboto-300;
+    padding: 20px 20px 40px 30px;
+
+    @include for-769-px {
+      padding: 20px 30px 20px 30px;
+    }
+  }
+
+  &__answer {
+    color: $accent;
+    text-decoration: underline;
+    margin-top: 10px;
+
+    @include for-1025-px {
+      display: none;
+    }
+  }
+
+  &__still {
+    padding-right: 35px;
+    color: $link;
+    text-decoration: underline;
+    align-self: flex-end;
+    position: relative;
+    max-width: 142px;
+    width: 100%;
+    margin-bottom: 50px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 2px;
+      width: 24px;
+      height: 14px;
+      background-image: url('../images/icons/arrow-right.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    @include for-769-px {
+      margin-bottom: 40px;
+    }
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+      padding-right: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__info {
+    @extend %Roboto-300;
+
+  }
+}

@@ -1,0 +1,183 @@
+.tickets-search-two {
+  .slick-arrow {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    path {
+      stroke: #225999;
+    }
+  }
+
+  .slick-prev {
+    transform: rotate(90deg);
+    left: -50px;
+    top: 10px;
+
+    @include for-470-px {
+      left: -45px;
+    }
+  }
+
+  .slick-next {
+    transform: rotate(-90deg);
+    right: -50px;
+    top: 10px;
+
+    @include for-470-px {
+      right: -45px;
+    }
+  }
+
+  .container {
+    padding: 0 15px;
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  padding: 30px 0 50px;
+
+  .tickets-search-one__date {
+    display: none;
+
+    @include for-470-px {
+      display: flex;
+    }
+  }
+
+  .tickets-search-one__search-box--two {
+    margin: 26px 0 10px;
+
+    @include for-1025-px {
+      margin: 1px 0 10px;
+    }
+  }
+
+  .tickets-search-one__search-swap {
+    width: 20px;
+    height: 17px;
+    top: -21px;
+    background-image: url('../images/swap-white.png');
+    transform: rotate(0deg);
+
+    @include for-1025-px {
+      background-image: url('../images/swap-btn.png');
+      width: 22px;
+      height: 25px;
+      top: -12px;
+      transform: rotate(90deg);
+    }
+  }
+
+  .tickets-search-one__calendar {
+    top: 590px !important;
+  }
+
+  .tickets-search-one__step-title-try {
+    font-size: 18px;
+    line-height: 21px;
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .tickets-search-one__step-item-try {
+    padding: 10px 0 20px;
+
+    @include for-769-px {
+      padding: 17px 0 17px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 40px;
+      padding-left: 20px;
+
+      @include for-769-px {
+        margin-right: 20px;
+      }
+    }
+
+    @include for-470-px {
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  .tickets-search-one__step-item--active {
+    margin-left: -75px;
+
+    @include for-769-px {
+      margin-left: -35px;
+    }
+
+    @include for-470-px {
+      margin-left: -85px;
+    }
+  }
+
+  &__search-input-date {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 0;
+    border: none;
+    outline: transparent;
+
+    &::placeholder {
+      color: #B6CCE4;
+    }
+  }
+
+  &__search-input-date--one {
+    border-right: 1px dashed $link;
+
+    @include for-1025-px {
+      border-right: none;
+      margin-bottom: 1px;
+    }
+  }
+
+  &__search-input-date {
+    padding-left: 38px;
+  }
+
+  &__calendar {
+    padding: 10px !important;
+    background: #fff;
+    z-index: 2000 !important;
+    filter: none !important;
+    width: auto !important;
+    top: 584px !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+
+    @include for-1025-px {
+      top: 546px !important;
+    }
+
+    @include for-769-px {
+      top: 410px !important;
+      width: 320px !important;
+      margin-top: auto !important;
+      left: 50% !important;
+      transform: translate(-50%) !important;
+    }
+
+    .ui-datepicker-group+.ui-datepicker-group {
+      margin-top: 0;
+    }
+  }
+}

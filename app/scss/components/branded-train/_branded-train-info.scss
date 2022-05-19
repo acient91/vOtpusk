@@ -1,0 +1,222 @@
+.branded-train-info {
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  padding-bottom: 30px;
+
+  @include for-769-px {
+    padding-bottom: 15px;
+  }
+
+  @include for-470-px {
+    padding-bottom: 10px;
+  }
+
+  &__title {
+    font-size: 45px;
+    line-height: 53px;
+    margin-bottom: 30px;
+    text-align: left;
+
+    @include for-1025-px {
+      font-size: 35px;
+      line-height: 41px;
+      margin-bottom: 20px;
+    }
+
+    @include for-769-px {
+      font-size: 25px;
+      line-height: 29px;
+      margin-bottom: 10px;
+    }
+
+    @include for-470-px {
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    @extend %Roboto-300;
+    margin-bottom: 40px;
+
+    @include for-1025-px {
+      margin-bottom: 50px;
+    }
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 30px;
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  &__images {
+    border-radius: 50px 50px 0 0px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 45px;
+    margin-bottom: 50px;
+
+    @include for-1025-px {
+      column-gap: 17px;
+      margin-bottom: 40px;
+    }
+
+    @include for-769-px {
+      column-gap: 28px;
+      margin-bottom: 30px;
+    }
+
+    @include for-470-px {
+      display: none;
+    }
+  }
+
+  &__content,
+  &__info-railway {
+    padding: 0 10px;
+  }
+
+  &__slider-wrapper,
+  &__slider-wrapper-railway {
+    position: relative;
+  }
+
+  &__slider-wrapper,
+  &__slider-wrapper-railway {
+    display: none;
+
+    @include for-470-px {
+      display: block;
+    }
+  }
+
+  &__slider,
+  &__slider-railway {
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 50px 0px 0px 0px;
+  }
+
+  &__info-btn,
+  &__railway-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+  }
+
+  &__info-btn-prev,
+  &__railway-btn-prev {
+    left: -20px;
+  }
+
+  &__info-btn-next,
+  &__railway-btn-next {
+    right: -20px;
+  }
+
+  &__img {
+    width: 100%;
+    text-align: center;
+
+    &:first-child {
+      border-radius: 50px 0 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 50px 0 0;
+    }
+  }
+
+  &__link {
+    padding: 20px 30px;
+    @extend %Roboto-700;
+    font-size: 20px;
+    line-height: 23px;
+    background-color: $accent;
+    text-transform: uppercase;
+    color: #ffffff;
+    max-width: 400px;
+    width: 100%;
+    display: block;
+    margin: 0 auto 40px;
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+      max-width: 280px;
+      padding: 12px 21px;
+    }
+
+    @include for-470-px {
+      margin-bottom: 30px;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    padding-bottom: 20px;
+
+    @include for-470-px {
+      padding-bottom: 5px;
+    }
+  }
+
+  &__info-title {
+    text-align: left;
+    margin-bottom: 30px;
+
+    @include for-769-px {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 20px;
+    }
+
+    @include for-470-px {
+      text-align: center;
+    }
+  }
+
+  &__info-text p {
+    @extend %Roboto-300;
+    margin-bottom: 20px;
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+      margin-bottom: 15px;
+    }
+
+    @include for-470-px {
+      text-align: center;
+      padding: 0 10px;
+    }
+  }
+}

@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>вОтпуск | Купить ЖД билеты</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script type="module" src="js/main.min.js" defer></script>
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="images/logo-blue.png" alt="Логотип компании">
+          <span class="logo__text">ЖД билеты</span>
+        </a>
+        <div class="header__top">
+          <div class="header__search">
+            <input class="header__search-input" type="text" placeholder="Поиск по сайту">
+            <button class="header__search-btn" type="submit">Найти</button>
+          </div>
+          <div class="header__search--mobile">
+            <button class="header__search-btn--mobile" type="submit"></button>
+          </div>
+          <div class="header__users">
+            <div class="header__lk">
+              <a class="header__lk-link" href="#">
+                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.1075 12.1217C3.41397 13.5679 0 17.935 0 23.0917C0 23.5141 0.343467 23.8569 0.766667 23.8569C1.18987 23.8569 1.53333 23.5141 1.53333 23.0917C1.53333 17.6013 5.99917 13.144 11.5 13.144C17.0008 13.144 21.4667 17.6013 21.4667 23.0917C21.4667 23.5141 21.8101 23.8569 22.2333 23.8569C22.6565 23.8569 23 23.5141 23 23.0917C23 17.935 19.586 13.5679 14.8925 12.1217C16.5439 11.0252 17.6333 9.14966 17.6333 7.02239C17.6333 3.64401 14.8848 0.900757 11.5 0.900757C8.11517 0.900757 5.36667 3.64401 5.36667 7.02239C5.36667 9.14966 6.4561 11.0252 8.1075 12.1217ZM11.5 2.43116C14.0384 2.43116 16.1 4.4888 16.1 7.02239C16.1 9.55598 14.0384 11.6136 11.5 11.6136C8.96157 11.6136 6.9 9.55598 6.9 7.02239C6.9 4.4888 8.96157 2.43116 11.5 2.43116Z"
+                    fill="#000000" />
+                </svg>
+              </a>
+            </div>
+            <div class="header__modal">
+              <a class="header__modal-link" href="#">Тарифы</a>
+              <a class="header__modal-link" href="#">Аренда жилья</a>
+            </div>
+            <button class="header__btn"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="payment">
+      <section class="top">
+        <div class="container">
+          <div class="top__inner">
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a class="breadcrumbs__link" href="#">ЖД Билеты</a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <span class="breadcrumbs__link-lats">
+                    Купить ЖД билеты
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="top__buttons" style="display: none;">
+              <a class="top__buttons-btn top__buttons-btn--active" href="#timetable">Расписание</a>
+              <a class="top__buttons-ticket" href="tickets-buy.html" target="_blank">Купить билеты</a>
+              <a class="top__buttons-btn" href="#hotel">Отели</a>
+              <a class="top__buttons-btn" href="#transfer">Трансферы</a>
+              <a class="top__buttons-btn" href="#reviews">Отзывы</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="tickets-payment">
+        <div class="container">
+          <ul class="tickets-payment__step-list">
+            <li class="tickets-payment__step-item">
+              <span class="tickets-payment__step-subtitle">шаг 1</span>
+              <span class="tickets-payment__step-title">Поиск билетов</span>
+            </li>
+            <li class="tickets-payment__step-item ">
+              <span class="tickets-payment__step-subtitle">шаг 2</span>
+              <span class="tickets-payment__step-title">
+                Поезд и места туда
+              </span>
+            </li>
+            <li class="tickets-payment__step-item">
+              <span class="tickets-payment__step-subtitle">
+                шаг 3
+              </span>
+              <span class="tickets-payment__step-title">
+                Поезд и места обратно
+              </span>
+            </li>
+            <li class="tickets-payment__step-item tickets-payment__step-item--active">
+              <span class="tickets-payment__step-subtitle">
+                шаг 4
+              </span>
+              <span class="tickets-payment__step-title">
+                Данные пассажиров и оплата
+              </span>
+            </li>
+          </ul>
+
+
+
+          <div class="tickets-payment__inner">
+            <div class="tickets-payment__content">
+              <h1 class="tickets-payment__title title">
+                Заполните данные пассажиров
+              </h1>
+              <ul class="tickets-payment__list">
+                <li class="tickets-payment__item">
+                  <div class="tickets-payment__item-top">
+                    <div class="tickets-payment__passenger-top">
+                      <span class="tickets-payment__passenger-num">
+                        Пассажир №1,
+                      </span>
+                      <span class="tickets-payment__passenger-info">
+                        взрослый
+                      </span>
+                    </div>
+                    <button class="tickets-payment__passenger-clear">очистить данные</button>
+                  </div>
+                  <div class="tickets-payment__gender">
+                    <span class="tickets-payment__gender-text">Пол*</span>
+                    <label class="tickets-payment__gender-label">
+                      <input class="tickets-payment__gender-input" type="radio" name="gender" checked required>
+                      <span class="tickets-payment__gender-name">Мужской</span>
+                    </label>
+                    <label class="tickets-payment__gender-label">
+                      <input class="tickets-payment__gender-input" type="radio" name="gender" required>
+                      <span class="tickets-payment__gender-name">Женский</span>
+                    </label>
+                  </div>
+                  <div class="tickets-payment__document">
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">Фамилия *</span>
+                      <input class="tickets-payment__document-input" type="text" placeholder="Введите Фамилию" required>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">Имя *</span>
+                      <input class="tickets-payment__document-input" type="text" placeholder="Введите Имя" required>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">Отчество *</span>
+                      <input class="tickets-payment__document-input" type="text" placeholder="Введите Отчество"
+                        required>
+                    </div>
+                    <div class="tickets-payment__document-box tickets-payment__document-box-date">
+                      <span class="tickets-payment__document-text">Дата рождения *</span>
+                      <input class="tickets-payment__document-input tickets-payment__document-input-date" type="tel"
+                        placeholder="Укажите дату" required>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">Тип документа *</span>
+                      <select class="tickets-payment__document-select" required>
+                        <option value="РФ" selected>Паспорт гр. РФ</option>
+                        <option value="Заграничный паспорт">Заграничный паспорт</option>
+                        <option value="Свидетельство о рождении">Свидетельство о рождении</option>
+                      </select>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Номер документа *
+                      </span>
+                      <input class="tickets-payment__document-input" type="tel" placeholder="Введите номер" required>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Страна выдачи документа *
+                      </span>
+                      <select class="tickets-payment__document-select" required>
+                        <option value="Россия">Россия</option>
+                        <option value="Беларусь">Беларусь</option>
+                      </select>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Тариф *
+                      </span>
+                      <select class="tickets-payment__document-select" required>
+                        <option value="Полный" selected>Полный</option>
+                        <option value="Детский">Детский</option>
+                        <option value="Детский">Детский без места</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="tickets-payment__card">
+                    <div class="tickets-payment__card-links">
+                      <a class="tickets-payment__card-bonus" href="#">
+                        БОНУСНАЯ КАРТА
+                      </a>
+                      <a class="tickets-payment__card-del" href="#">
+                        удалить карту
+                      </a>
+                    </div>
+                    <div class="tickets-payment__card-box">
+                      <div class="tickets-payment__document-box">
+                        <span class="tickets-payment__document-text">
+                          Тип карты
+                        </span>
+                        <select class="tickets-payment__document-select">
+                          <option value="Полный">Начисление баллов</option>
+                        </select>
+                      </div>
+                      <div class="tickets-payment__document-box">
+                        <span class="tickets-payment__document-text">
+                          Номер карты
+                        </span>
+                        <input class="tickets-payment__document-input" type="tel" placeholder="Введите номер">
+                      </div>
+                      <p class="tickets-payment__card-text">
+                        Начисление баллов осуществляется в течение 30 дней с момента начала поездки. Билет будет
+                        оформлен
+                        на ФИО владельца карты.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="tickets-payment__info">
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Электронная почта
+                      </span>
+                      <input class="tickets-payment__document-input" type="email" placeholder="Введите почту">
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Телефон
+                      </span>
+                      <input class="tickets-payment__document-input" type="tel" placeholder="+7">
+                    </div>
+                    <p class="tickets-payment__info-text">
+                      Укажите контактные данные пассажира
+                    </p>
+                  </div>
+                </li>
+                <li class="tickets-payment__item">
+                  <div class="tickets-payment__item-top">
+                    <div class="tickets-payment__passenger-top">
+                      <span class="tickets-payment__passenger-num">
+                        Пассажир №2,
+                      </span>
+                      <span class="tickets-payment__passenger-info">
+                        детский (ребенок до 5 лет)
+                      </span>
+                    </div>
+                    <button class="tickets-payment__passenger-clear">очистить данные</button>
+                  </div>
+                  <div class="tickets-payment__gender">
+                    <span class="tickets-payment__gender-text">Пол*</span>
+                    <label class="tickets-payment__gender-label">
+                      <input class="tickets-payment__gender-input" type="radio" name="child" checked required>
+                      <span class="tickets-payment__gender-name">Мужской</span>
+                    </label>
+                    <label class="tickets-payment__gender-label">
+                      <input class="tickets-payment__gender-input" type="radio" name="child" required>
+                      <span class="tickets-payment__gender-name">Женский</span>
+                    </label>
+                  </div>
+                  <div class="tickets-payment__document">
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Фамилия *
+                      </span>
+                      <input class="tickets-payment__document-input" type="text" placeholder="Введите Фамилию" required>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Имя *
+                      </span>
+                      <input class="tickets-payment__document-input" type="text" placeholder="Введите Имя" required>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Отчество *
+                      </span>
+                      <input class="tickets-payment__document-input" type="text" placeholder="Введите Отчество"
+                        required>
+                    </div>
+                    <div class="tickets-payment__document-box tickets-payment__document-box-date">
+                      <span class="tickets-payment__document-text">
+                        Дата рождения *
+                      </span>
+                      <input class="tickets-payment__document-input tickets-payment__document-input-date" type="tel"
+                        placeholder="Укажите дату" required>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Тип документа *
+                      </span>
+                      <select class="tickets-payment__document-select" required>
+                        <option value="РФ">
+                          Паспорт гр. РФ
+                        </option>
+                        <option value="Заграничный паспорт">
+                          Заграничный паспорт
+                        </option>
+                        <option value="Свидетельство о рождении" selected>
+                          Свидетельство о рождении
+                        </option>
+                      </select>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Номер документа *
+                      </span>
+                      <input class="tickets-payment__document-input" type="tel" placeholder="Введите номер" required>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Страна выдачи документа *
+                      </span>
+                      <select class="tickets-payment__document-select" required>
+                        <option value="Россия">Россия</option>
+                        <option value="Беларусь">Беларусь</option>
+                      </select>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">Тариф *</span>
+                      <select class="tickets-payment__document-select" required>
+                        <option value="Полный" selected>Полный</option>
+                        <option value="Детский">Детский</option>
+                        <option value="Детский">Детский без места</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="tickets-payment__info">
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Электронная почта
+                      </span>
+                      <input class="tickets-payment__document-input" type="email" placeholder="Введите почту">
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Телефон
+                      </span>
+                      <input class="tickets-payment__document-input" type="tel" placeholder="+7">
+                    </div>
+                    <p class="tickets-payment__info-text">
+                      Укажите контактные данные пассажира
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <div class="tickets-payment__add">
+                <button class="tickets-payment__add-btn">
+                  добавить ребенка
+                </button>
+                <span class="tickets-payment__add-text">
+                  до 5 лет бесплатно
+                </span>
+              </div>
+
+              <div class="tickets-payment__information">
+                <div class="tickets-payment__information-inner">
+                  <span class="tickets-payment__information-title">
+                    Контактная информация
+                  </span>
+                  <div class="tickets-payment__info">
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Электронная почта *
+                      </span>
+                      <input class="tickets-payment__document-input" type="email" placeholder="Введите почту" required>
+                    </div>
+                    <div class="tickets-payment__document-box">
+                      <span class="tickets-payment__document-text">
+                        Телефон *
+                      </span>
+                      <input class="tickets-payment__document-input" type="tel" placeholder="+7" required>
+                    </div>
+                    <p class="tickets-payment__info-text">
+                      На указанные данные<br>
+                      придет информация о заказе.
+                    </p>
+                  </div>
+                </div>
+                <div class="tickets-payment__price-box">
+                  <span class="tickets-payment__price-text">
+                    *Поля, обязательные к заполнению
+                  </span>
+                  <span class="tickets-payment__price-sum">
+                    Сумма заказа: <span class="tickets-payment__price-num">от 3 345 руб</span>
+                  </span>
+                  <span class="tickets-payment__price-info">
+                    Окончательную стоимость заказа вы можете узнать на следующем шаге.
+                  </span>
+                </div>
+              </div>
+              <div class="tickets-payment__choose">
+                <h1 class="tickets-payment__choose-title title">
+                  Выберите способ оплаты
+                </h1>
+
+                <div class="tickets-payment__choose-box">
+                  <div class="tickets-payment__choose-card">
+                    <div class="tickets-payment__choose-card-top">
+                      Картой
+                    </div>
+                    <div class="tickets-payment__choose-card-bottom">
+                      <img class="tickets-payment__choose-card-img" src="images/tickets/card.png"
+                        alt="Банковская карта">
+                      <p class="tickets-payment__choose-card-text">
+                        Оплатить банковской картой онлайн
+                        <span class="tickets-payment__choose-card-subtext">
+                          Visa, Visa Electron, MasterCard, Maestro, Мир
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="tickets-payment__choose-other">
+                    <div class="tickets-payment__choose-card-top">
+                      Другое
+                    </div>
+                    <p class="tickets-payment__choose-other-text">
+                      Платеж осуществляется с использованием платежного шлюза ВТБ24 и Сбербанка. Данные вашей карты
+                      передаются по защищенному зашифрованному соединению с применением протокола TLS.
+                    </p>
+                  </div>
+                </div>
+                <div class="tickets-payment__choose-bottom">
+                  <div class="tickets-payment__choose-assent">
+                    <div class="tickets-payment__choose-assent-box">
+                      <input class="tickets-payment__choose-assent-input" type="checkbox" checked>
+                      <span class="tickets-payment__choose-assent-text">
+                        Я согласен на
+                        <a class="tickets-payment__choose-assent-link" href="#">
+                          обработку персональных данных
+                        </a>
+                      </span>
+                    </div>
+                    <div class="tickets-payment__choose-assent-box">
+                      <input class="tickets-payment__choose-assent-input" type="checkbox" checked>
+                      <span class="tickets-payment__choose-assent-text">
+                        Я согласен на получение промокодов на скидку и других
+                        <a class="tickets-payment__choose-assent-link tickets-payment__choose-assent-link--last"
+                          href="#">
+                          рекламно-информационных материалов
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                  <button class="tickets-payment__choose-btn">
+                    оформить билет
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="tickets-payment__aside">
+              <h3 class="tickets-payment__aside-title">
+                Ваш заказ
+              </h3>
+
+              <div class="tickets-payment__aside-inner">
+                <div class="tickets-payment__aside-item">
+                  <div class="tickets-payment__aside-top">
+                    <span class="tickets-payment__aside-name">
+                      Туда
+                    </span>
+                    <a class="tickets-payment__aside-link tickets-payment__aside-link--active" href="#">
+                      скрыть
+                    </a>
+                  </div>
+                  <div class="tickets-payment__aside-content">
+                    <div class="tickets-payment__aside-train">
+                      <span class="tickets-payment__aside-tain-num">
+                        № 135А
+                      </span>
+                      <span class="tickets-payment__aside-tain-city">
+                        Москва → Воронеж
+                      </span>
+                      <span class="tickets-payment__aside-tain-type">
+                        ФПК Скорый
+                      </span>
+                    </div>
+                    <div class="tickets-payment__aside-route">
+                      <div class="tickets-payment__aside-route-box">
+                        <span class="tickets-payment__aside-route-text">
+                          Отправление
+                        </span>
+                        <div class="tickets-payment__aside-route-date">
+                          <span class="tickets-payment__aside-route-time">
+                            05:32
+                          </span>
+                          <span class="tickets-payment__aside-route-day">
+                            Пт, 4 дек. (мест.)
+                          </span>
+                        </div>
+                        <span class="tickets-payment__aside-route-city">
+                          Москва, ВК Восточный
+                        </span>
+                      </div>
+                      <div class="tickets-payment__aside-route-box">
+                        <span class="tickets-payment__aside-route-text">
+                          Прибытие
+                        </span>
+                        <div class="tickets-payment__aside-route-date">
+                          <span class="tickets-payment__aside-route-time">
+                            19:05
+                          </span>
+                          <span class="tickets-payment__aside-route-day">
+                            Пт, 4 дек. (мест.)
+                          </span>
+                        </div>
+                        <span class="tickets-payment__aside-route-city">
+                          Воронеж, Вокзал Придача
+                        </span>
+                      </div>
+                    </div>
+                    <div class="tickets-payment__aside-wagon">
+                      <span class="tickets-payment__aside-wagon-num">
+                        Вагон №3
+                      </span>
+                      <span class="tickets-payment__aside-wagon-info">
+                        с бельем 3Э
+                      </span>
+                      <span class="tickets-payment__aside-wagon-place">
+                        МЕСТА <span>42 </span><span>43</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="tickets-payment__aside-item">
+                  <div class="tickets-payment__aside-top">
+                    <span class="tickets-payment__aside-name">
+                      Обратно
+                    </span>
+                    <a class="tickets-payment__aside-link tickets-payment__aside-link--active" href="#">
+                      скрыть
+                    </a>
+                  </div>
+                  <div class="tickets-payment__aside-content">
+                    <div class="tickets-payment__aside-train">
+                      <span class="tickets-payment__aside-tain-num">
+                        № 091*С Таврия
+                      </span>
+                      <span class="tickets-payment__aside-tain-city">
+                        Воронеж → Москва
+                      </span>
+                      <span class="tickets-payment__aside-tain-type">
+                        ГРАНДТ Скорый
+                      </span>
+                    </div>
+                    <div class="tickets-payment__aside-route">
+                      <div class="tickets-payment__aside-route-box">
+                        <span class="tickets-payment__aside-route-text">
+                          Отправление
+                        </span>
+                        <div class="tickets-payment__aside-route-date">
+                          <span class="tickets-payment__aside-route-time">
+                            05:32
+                          </span>
+                          <span class="tickets-payment__aside-route-day">
+                            Пт, 29 дек. (мест.)
+                          </span>
+                        </div>
+                        <span class="tickets-payment__aside-route-city">
+                          Воронеж, Вокзал Придача
+                        </span>
+                      </div>
+                      <div class="tickets-payment__aside-route-box">
+                        <span class="tickets-payment__aside-route-text">
+                          Прибытие
+                        </span>
+                        <div class="tickets-payment__aside-route-date">
+                          <span class="tickets-payment__aside-route-time">
+                            19:05
+                          </span>
+                          <span class="tickets-payment__aside-route-day">
+                            Пт, 29 дек. (мест.)
+                          </span>
+                        </div>
+                        <span class="tickets-payment__aside-route-city">
+                          Москва, ВК Восточный
+                        </span>
+                      </div>
+                    </div>
+                    <div class="tickets-payment__aside-wagon">
+                      <span class="tickets-payment__aside-wagon-num">
+                        Вагон №8
+                      </span>
+                      <span class="tickets-payment__aside-wagon-info">
+                        с бельем 3Э
+                      </span>
+                      <span class="tickets-payment__aside-wagon-place">
+                        МЕСТА <span>25 </span><span>26</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section class="tickets-attention">
+        <div class="container">
+          <h3 class="tickets-attention__title title">
+            Обратите внимание:
+          </h3>
+          <div class="tickets-attention__text">
+            <p>
+              Для получения билета на бланке ОАО «РЖД» и посадки в вагон при себе необходимо иметь документ,
+              удостоверяющий личность пассажира. При отсутствии документа кассир вправе отказать в выдаче проездного
+              документа.
+            </p>
+            <p>
+              Билеты могут быть оформлены не менее чем за 15 минут и не ранее чем от 60 до 120 суток до отправления
+              поезда
+              во внутреннем сообщении, от 60 до 90 суток в международном сообщении и в сообщении с республикой Абхазия,
+              45
+              суток для сообщения со странами СНГ и Балтии и за 10 суток до отправления поезда в пригородном сообщении.
+            </p>
+            <p>
+              Пассажир несет исключительную и полную ответственность за соблюдение всех иммиграционных правил стран, из
+              которых, в которые и через которые осуществляется железнодорожная перевозка.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="tickets-info">
+        <div class="container">
+          <ul class="tickets-buy__list">
+            <li class="tickets-buy__item">
+              <img class="tickets-buy__item-img" src="images/tickets/time.png" alt="Экономия времени">
+              <div class="tickets-buy__item-content">
+                <span class="tickets-buy__item-title">
+                  Экономия времени
+                </span>
+                <span class="tickets-buy__item-text">
+                  Оформление покупки в онлайл системе не займет больше 2 минут
+                </span>
+              </div>
+            </li>
+            <li class="tickets-buy__item">
+              <img class="tickets-buy__item-img tickets-buy__item-img--place" src="images/tickets/place.png"
+                alt="Выбор места">
+              <div class="tickets-buy__item-content">
+                <span class="tickets-buy__item-title">
+                  Выбор места
+                </span>
+                <span class="tickets-buy__item-text">
+                  Самостоятельный выбор места в поезде с помощью интерактивных схем салона
+                </span>
+              </div>
+            </li>
+            <li class="tickets-buy__item">
+              <img class="tickets-buy__item-img tickets-buy__item-img--payment" src="images/tickets/payment.png"
+                alt="Удобная оплата">
+              <div class="tickets-buy__item-content">
+                <span class="tickets-buy__item-title">
+                  Удобная оплата
+                </span>
+                <span class="tickets-buy__item-text">
+                  Оплата с помощью любых платежных инструментов: от банковских карт до электронных денег
+                </span>
+              </div>
+            </li>
+            <li class="tickets-buy__item">
+              <img class="tickets-buy__item-img tickets-buy__item-img--safe" src="images/tickets/safe.png"
+                alt="Безопасная покупка">
+              <div class="tickets-buy__item-content tickets-buy__item-content--safe">
+                <span class="tickets-buy__item-title">
+                  Безопасная покупка
+                </span>
+                <span class="tickets-buy__item-text">
+                  Защина дпнных от взлома и утечек, бронирование и покупка абсолютно безопасны
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="tickets-info__partners">
+          <div class="container">
+            <h3 class="tickets-info__partners-title title">
+              Принимаем к оплате
+            </h3>
+            <img class="tickets-info__partners-img" src="images/tickets/partners.png" alt="партнёры">
+            <div class="tickets-info__partners-mobile">
+              <img class="tickets-info__partners-mob-img" src="images/tickets/partners-mob1.png" alt="партнёры">
+              <img class="tickets-info__partners-mob-img" src="images/tickets/partners-mob2.png" alt="партнёры">
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <button class="scroll-top">
+      <img src="images/scroll-top.png" alt="стрелка вверх">
+    </button>
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__columns">
+          <div class="footer__column">
+            <h4 class="footer__title">Страны</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Абхазия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Венгрия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Грузия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Нидерланды</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Финляндия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Швейцария</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Австрия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Германия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Китай</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Словакия</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Франция</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Эстония</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column footer__mobile">
+            <h4 class="footer__title">Города и курорты</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Амстердам</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Женева</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Куршавель</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Ницца</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Рига</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Хевиз</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Берлин</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Зальцбург</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Марсель</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Пекин</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Тбилиси</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Цюрих</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column footer__mobile">
+            <h4 class="footer__title">Сезоны</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Январь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Март</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Май</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Июль</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Сентябрь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Ноябрь</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Февраль</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Апрель</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Июнь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Август</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Октябрь</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Декабрь</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__column footer__mobile">
+            <h4 class="footer__title">Виды отдыха</h4>
+            <div class="footer__wrapper">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Пляжный отдых</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Экскурсионные туры</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Спорт. Активный отдых</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Свадебные туры</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Шоп туры</a>
+                </li>
+                <li class="footer__item">
+                  <a class="footer__item-link" href="#">Туры на праздник</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <img class="footer__counte" src="images/counter.jpg" alt="" loading="lazy">
+          <div class="footer__bottom-links">
+            <a class="footer__bottom-link" href="#">О проекте</a>
+            <a class="footer__bottom-link" href="#">Реклама на сайте</a>
+            <a class="footer__bottom-link" href="#">Промокоды</a>
+          </div>
+          <div class="footer__socials footer__mobile">
+            <a class="footer__social" href="#">
+              <img class="footer__social-icon" src="images/icons/vk.svg" alt="">
+            </a>
+            <a class="footer__social" href="#">
+              <svg class="footer__social-icon" width="35" height="35" viewBox="0 0 35 35"
+                xmlns="http://www.w3.org/2000/svg" fill="none">
+                <path fill="#3B5995" d="M0 0h35v35h-35z" />
+                <path
+                  d="M18.726 25.018v-7.684h2.592l.385-3.008h-2.978v-1.916c0-.868.242-1.463 1.488-1.463h1.579v-2.682c-.768-.082-1.54-.122-2.313-.119-2.291 0-3.864 1.399-3.864 3.967v2.208h-2.575v3.009h2.581v7.689h3.105z"
+                  fill="#fff" /></svg>
+            </a>
+          </div>
+          <div class="footer__policy footer__mobile">
+            <p class="footer__policy-text">
+              Copyright 1999-2021 © "В ОТПУСК.РУ" Все права защищены
+            </p>
+            <p class="footer__policy-text">
+              При использовании материалов активная ссылка на сайт обязательна
+            </p>
+          </div>
+          <p class="footer__bottom-box footer__mobile">
+            <span class="footer__bottom-help">
+              Сообщить об ошибке:
+            </span>
+            <span class="footer__bottom-text">выделите неточность в тексте и нажмите</span>
+
+            <span class="footer__bottom-func">Ctrl+Enter</span>
+          </p>
+          <div class="footer__bottom-icons footer__mobile">
+            <svg class="footer__bottom-icon" width="45" height="30" viewBox="0 0 45 30"
+              xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path fill="#fff" stroke="#B3B4B6" stroke-width="2" d="M1 1h43v28h-43z" />
+              <path
+                d="M16.431 15.315l1.962.622c-.301 1.094-.802 1.907-1.504 2.44-.697.529-1.584.793-2.659.793-1.331 0-2.425-.453-3.281-1.36-.857-.911-1.285-2.156-1.285-3.732 0-1.668.431-2.962 1.292-3.883.861-.925 1.994-1.388 3.397-1.388 1.226 0 2.222.362 2.987 1.087.456.428.798 1.044 1.025 1.846l-2.003.479c-.119-.52-.367-.93-.745-1.23-.374-.301-.829-.451-1.367-.451-.743 0-1.347.267-1.812.8-.46.533-.691 1.397-.691 2.591 0 1.267.228 2.169.684 2.707.456.538 1.048.807 1.777.807.538 0 1-.171 1.388-.513.387-.342.665-.88.834-1.613zm7.02-3.575v1.531h-1.313v2.926c0 .592.011.939.034 1.039.027.096.084.175.171.239.091.064.2.096.328.096.178 0 .435-.062.772-.185l.164 1.49c-.447.191-.953.287-1.518.287-.346 0-.659-.057-.937-.171-.278-.119-.483-.269-.615-.451-.128-.187-.216-.438-.267-.752-.041-.223-.062-.674-.062-1.354v-3.165h-.882v-1.531h.882v-1.442l1.928-1.121v2.563h1.313zm3.172 7.26h-1.921v-7.26h1.784v1.032c.305-.488.579-.809.82-.964.246-.155.524-.232.834-.232.438 0 .859.121 1.265.362l-.595 1.675c-.324-.21-.624-.315-.902-.315-.269 0-.497.075-.684.226-.187.146-.335.412-.444.8-.105.387-.157 1.199-.157 2.434v2.242zm3.616 0v-10.021h1.921v10.021h-1.921z"
+                fill="#B3B4B6" /></svg>
+            <svg class="footer__bottom-icon" width="34" height="30" viewBox="0 0 34 30"
+              xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path d="M33 1h-16v6.462h-16v21.538h32v-28z" fill="#fff" stroke="#B3B4B6" stroke-width="2" />
+              <path
+                d="M25.299 19.615h-12.714l2.88 3.635-1.666 1.346-4.8-6.057 4.8-6.057 1.666 1.345-2.88 3.635h10.581v-6.462h2.133v8.615z"
+                fill="#B3B4B6" /></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+</body>
+
+</html>

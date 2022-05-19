@@ -1,0 +1,182 @@
+.header {
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  padding: 40px 0;
+  z-index: 10;
+  border-bottom: 1px dashed $btn;
+
+  @include for-470-px {
+    padding: 25px 0 30px;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__search {
+    display: flex;
+    position: relative;
+    margin-right: 43px;
+    max-width: 350px;
+    width: 100%;
+
+    @include for-725-px {
+      display: none;
+    }
+  }
+
+  &__search--mobile {
+    display: none;
+
+    @include for-725-px {
+      display: flex;
+    }
+  }
+
+  &__search-btn--mobile {
+    width: 20px;
+    height: 23px;
+    background-image: url('../images/icons/search-black.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+  }
+
+  &__search::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('../images/icons/search-grey.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__search-input {
+    width: 100%;
+    color: #c4c4c4;
+    padding: 12px 15px 12px 40px;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 14px;
+    border: 1px solid #979797;
+    outline: transparent;
+    margin-right: 5px;
+
+    &::placeholder {
+      color: #c4c4c4;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 1.2px;
+    }
+  }
+
+  &__search-btn {
+    padding: 12px 18px;
+    height: 40px;
+    background-color: $btn;
+    color: #ffffff;
+    @extend %Roboto-500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+
+  &__users {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__lk {
+    margin-right: 26px;
+
+    @include for-321-px {
+      margin-right: 20px;
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    padding: 25px 27px;
+    font-size: 14px;
+    color: $link;
+    width: 150px;
+    box-shadow: 0 7px 4px -3px rgb(0 0 0 / 15%);
+    background-color: #ffffff;
+    top: calc(100% + 10px);
+    right: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+
+  &__modal-link {
+    display: flex;
+
+    &:last-child {
+      margin-top: 7px;
+    }
+  }
+
+  &__modal--open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__btn {
+    width: 23px;
+    height: 16px;
+    background-image: url('../images/icons/burger-black.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    margin-right: 10px;
+
+    @include for-470-px {
+      width: 80px;
+    }
+  }
+
+  &__text {
+    color: $btn;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 5px;
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}

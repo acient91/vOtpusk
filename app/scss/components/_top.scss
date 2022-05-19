@@ -1,0 +1,255 @@
+.top {
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  .breadcrumbs {
+
+    @include for-769-px {
+      margin-bottom: 10px;
+    }
+
+    @include for-470-px {
+      display: none;
+    }
+
+    &__list {
+      @include for-1025-px {
+        margin-bottom: 20px;
+      }
+
+      @include for-769-px {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  padding: 20px 0 40px;
+
+  @include for-1025-px {
+    padding: 20px 0 10px;
+  }
+
+  @include for-769-px {
+    padding: 10px 0 10px;
+  }
+
+  &__title {
+    font-size: 45px;
+    line-height: 53px;
+    margin-bottom: 20px;
+    text-align: left;
+
+    @include for-1025-px {
+      font-size: 35px;
+      line-height: 41px;
+    }
+
+    @include for-769-px {
+      font-size: 25px;
+      line-height: 29px;
+      margin-bottom: 25px;
+    }
+
+    @include for-470-px {
+      text-align: center;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  &__text {
+    @extend %Roboto-300;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 40px;
+    color: $text;
+
+    @include for-1025-px {
+      margin-bottom: 30px;
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  .search {
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  .search__content {
+    display: block;
+  }
+
+  .search__inner {
+    background-color: $link;
+    border-top: 1px dashed #ffffff;
+  }
+
+  .search__top-item {
+    background-color: #044E95;
+    margin-right: 1px;
+    text-align: center;
+
+    @include for-470-px {
+      padding: 12px 5px;
+      width: 100%;
+    }
+  }
+
+  .search__top-item--active {
+    display: block;
+    background-color: $link;
+    height: 42px;
+    border-radius: 0px 5px 0px 0px;
+  }
+
+  &__inner--active {
+    .top__buttons {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      background-color: #ffffff;
+      justify-content: center;
+
+      @include for-1025-px {
+        justify-content: flex-start;
+      }
+
+      @include for-470-px {
+        height: 40px;
+        padding: 0 10px;
+
+        .top__buttons-btn {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .top__text {
+      margin-bottom: 95px;
+
+      @include for-470-px {
+        margin-bottom: 75px;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+
+  &__buttons::-webkit-scrollbar {
+    height: 5px;
+    background-color: transparent;
+  }
+
+  &__buttons::-webkit-scrollbar-thumb {
+    max-width: 170px;
+    width: 100%;
+    height: 5px;
+    background-color: transparent;
+  }
+
+  &__buttons-btn {
+    color: #979797;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    border-bottom: 5px solid transparent;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include for-769-px {
+        margin-right: 35px;
+      }
+
+      @include for-470-px {
+        margin-right: 15px;
+      }
+    }
+
+    @include for-769-px {
+      padding: 13px 15px;
+      font-size: 14px;
+      line-height: 16px;
+      width: 135px;
+    }
+
+    @include for-470-px {
+      padding: 10px 0;
+      margin-bottom: 15px;
+      font-size: 12px;
+      line-height: 14px;
+      width: 100px;
+    }
+  }
+
+  &__buttons-btn--active {
+    @extend %Roboto-900;
+    border-color: $accent;
+    color: $accent;
+  }
+
+  &__buttons-ticket {
+    color: #979797;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    border-bottom: 5px solid transparent;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include for-769-px {
+        margin-right: 35px;
+      }
+
+      @include for-470-px {
+        margin-right: 15px;
+      }
+    }
+
+    @include for-769-px {
+      padding: 13px 15px;
+      font-size: 14px;
+      line-height: 16px;
+      width: 135px;
+    }
+
+    @include for-470-px {
+      padding: 10px 0;
+      margin-bottom: 15px;
+      font-size: 12px;
+      line-height: 14px;
+      width: 100px;
+      text-align: left;
+    }
+  }
+}

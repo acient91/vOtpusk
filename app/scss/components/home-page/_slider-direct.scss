@@ -1,0 +1,137 @@
+.slider-direct {
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+  }
+
+  padding-bottom: 70px;
+
+  @include for-1025-px {
+    padding-bottom: 50px;
+  }
+
+  @include for-769-px {
+    padding-bottom: 30px;
+  }
+
+  &__wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0 20px;
+    position: relative;
+    margin-bottom: 20px;
+
+    @include for-1025-px {
+      margin-bottom: 0;
+    }
+  }
+
+  &__inner {
+    border-radius: 0 50px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+
+    @include for-470-px {
+      border-radius: 0 0 0 50px;
+    }
+
+    @include for-321-px {
+      border-radius: 0 0 0 50px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+
+    @include for-769-px {
+      transform: none !important;
+    }
+  }
+
+  &__text {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  &__text-railway {
+    text-transform: uppercase;
+    margin: 10px 0 0 30px;
+  }
+
+  &__item-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  }
+
+  &__box-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(34, 89, 153, 0.7);
+    padding: 10px 30px 15px;
+    margin-top: auto;
+  }
+
+  &__city {
+    color: #ffffff;
+    @extend %Roboto-700;
+    font-size: 30px;
+    line-height: 35px;
+    margin: 5px 0;
+  }
+
+  &__link {
+    text-align: left;
+    font-size: 16px;
+    line-height: 19px;
+    color: $link;
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: underline;
+    margin-right: 6px;
+
+    @include for-1025-px {
+      display: none;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn-prev {
+    left: 0;
+  }
+
+  &__btn-next {
+    right: 0;
+  }
+}

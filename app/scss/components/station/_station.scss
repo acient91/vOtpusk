@@ -1,0 +1,76 @@
+.train-content-two {
+
+  .search__content-box--where {
+    @include for-470-px {
+      display: block;
+      margin-top: 1px;
+      max-width: 100%;
+    }
+  }
+
+  .search__content-input--where {
+    @include for-470-px {
+      border-left: none;
+      padding: 12px;
+    }
+  }
+
+  .search__content-swap {
+    @include for-470-px {
+      display: block;
+      right: 13px;
+      transform: rotate(90deg);
+      top: 31px;
+    }
+  }
+
+
+  .timetable {
+    margin-top: -82px;
+
+    @include for-1025-px {
+      margin-top: -52px;
+    }
+  }
+
+  .timetable__inner {
+    padding-top: 50px;
+
+    @include for-769-px {
+      padding-top: 30px;
+    }
+  }
+
+  .timetable__buttons {
+    display: flex;
+
+    @include for-470-px {
+      justify-content: space-between;
+    }
+  }
+
+  .timetable__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 152px;
+    height: 42px;
+    background-color: transparent;
+    color: #979797;
+
+    @include for-769-px {
+      width: 111px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include for-470-px {
+      width: 50%;
+    }
+  }
+
+  .timetable__btn--active {
+    background-color: #ffffff;
+    color: $text;
+  }
+}

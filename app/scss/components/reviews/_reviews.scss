@@ -1,0 +1,134 @@
+.reviews {
+
+  .train-reviews__date,
+  .train-reviews__star,
+  .train-reviews__star-num {
+    display: block;
+  }
+
+  .train-reviews__bottom {
+    background-color: $default;
+  }
+
+  .train-reviews__list {
+    margin-bottom: 40px;
+  }
+
+  .train-reviews__item {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  .top__buttons {
+    display: none;
+  }
+
+  padding: 20px 0 50px;
+
+  &__link-home {
+    padding-left: 40px;
+    color: $accent;
+    text-decoration: underline;
+    display: inline-block;
+    margin-bottom: 30px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 25px;
+      height: 14px;
+      background-image: url('../images/icons/right-orange.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      transform: rotate(180deg);
+
+      @include for-769-px {
+        width: 18px;
+        height: 10px;
+      }
+    }
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+      padding-left: 28px;
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 14px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include for-470-px {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title {
+    @extend %Roboto-900;
+    font-size: 45px;
+    line-height: 53px;
+
+    @include for-1025-px {
+      font-size: 35px;
+      line-height: 41px;
+    }
+
+    @include for-769-px {
+      font-size: 25px;
+      line-height: 29px;
+    }
+
+    @include for-470-px {
+      text-align: center;
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__num {
+    font-size: 20px;
+    line-height: 23px;
+    color: #c4c4c4;
+    margin-bottom: 35px;
+
+    @include for-1025-px {
+      margin-bottom: 20px;
+    }
+
+    @include for-769-px {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+    }
+  }
+}

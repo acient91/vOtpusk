@@ -1,0 +1,310 @@
+.branded-train-inner {
+  .branded-search__calendar {
+    top: 313px !important;
+  }
+
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  .top__inner {
+    display: none;
+  }
+
+  .top__inner--active {
+    display: none;
+  }
+
+  .branded-search__box-to {
+    max-width: 320px;
+  }
+
+  .branded-search__box-where {
+    max-width: 342px;
+  }
+
+  .branded-search__box-date {
+    max-width: 298px;
+  }
+
+  .branded-search__box-to,
+  .branded-search__box-where,
+  .branded-search__box-date {
+    width: 100%;
+
+    @include for-470-px {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.branded-train-table {
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+  }
+
+  padding: 40px 0 70px;
+
+  @include for-769-px {
+    padding: 30px 0 55px;
+  }
+
+  @include for-470-px {
+    padding: 20px 0 30px;
+  }
+
+  &__list {
+    padding-top: 40px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 50px;
+    margin-bottom: 50px;
+
+    @include for-769-px {
+      margin-bottom: 30px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+  }
+
+  &__item {
+    padding: 20px 34px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px dashed $btn;
+    }
+
+    @include for-769-px {
+      padding: 20px;
+    }
+
+    @include for-470-px {
+      padding: 20px 16px 20px 16px;
+      flex-direction: column;
+    }
+  }
+
+  &__station {
+    @extend %Roboto-700;
+    margin-right: 50px;
+
+    @include for-470-px {
+      margin-right: 0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include for-769-px {
+      align-items: flex-end;
+    }
+
+    @include for-470-px {
+      width: 100%;
+    }
+  }
+
+  &__box {
+    margin-right: 40px;
+    @extend %Roboto-700;
+    width: 318px;
+    display: flex;
+    justify-content: space-between;
+
+    @include for-769-px {
+      width: 280px;
+      margin-right: 25px;
+    }
+
+    @include for-470-px {
+      flex-direction: column;
+      font-family: 'Roboto-Regular';
+      font-weight: 400;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 14px;
+      width: auto;
+      margin-right: 0;
+    }
+  }
+
+  &__box-dep--top,
+  &__box-price--top {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: -25px;
+      @extend %Roboto-400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #c4c4c4;
+
+      @include for-470-px {
+        display: none;
+      }
+    }
+  }
+
+  &__box-dep--top {
+
+    &::before {
+      content: 'Выезд';
+      left: 0;
+    }
+
+    @include for-470-px {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  &__box-price--top::before {
+    content: 'Цена';
+    right: 0;
+  }
+
+  &__add {
+    width: 120px;
+    height: 40px;
+    @extend %Roboto-700;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $link;
+    color: #ffffff;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 30px;
+
+    @include for-1025-px {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 20px;
+    }
+
+    @include for-769-px {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    @include for-470-px {
+      text-align: center;
+    }
+  }
+
+  &__wrapper {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0 20px;
+    position: relative;
+    margin-bottom: 20px;
+
+    @include for-1025-px {
+      margin-bottom: 0;
+    }
+  }
+
+  &__inner {
+    border-radius: 50px 50px 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+
+    @include for-470-px {
+      border-radius: 0 0 0 50px;
+    }
+
+    @include for-321-px {
+      border-radius: 0 0 0 50px;
+    }
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__bottom {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px 15px;
+    background: rgba(34, 89, 153, 0.7);
+    color: #ffffff;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    @include for-769-px {
+      padding: 10px 20px 18px;
+    }
+  }
+
+  &__brand {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__name {
+    margin-bottom: 0;
+    margin-top: 5px;
+    color: #ffffff;
+    text-align: left;
+
+    @include for-769-px {
+      font-size: 25px;
+      line-height: 29px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn-prev {
+    left: 0;
+  }
+
+  &__btn-next {
+    right: 0;
+  }
+}

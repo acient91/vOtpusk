@@ -1,0 +1,211 @@
+.calendar {
+  .train-reviews__not-reviews {
+    display: block;
+
+    @include for-470-px {
+      margin-bottom: 20px;
+    }
+  }
+
+  .train-reviews__inner {
+    @include for-470-px {
+      flex-direction: column;
+    }
+
+    .train-reviews__title {
+      @include for-470-px {
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    @extend %Roboto-900;
+    font-size: 25px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include for-769-px {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 20px;
+    }
+
+    @include for-470-px {
+      font-size: 18px;
+      line-height: 21px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subtitle-nodate {
+    margin-bottom: 30px;
+
+    @include for-470-px {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    @extend %Roboto-700;
+    font-size: 25px;
+    line-height: 29px;
+    color: $btn;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include for-470-px {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__content {
+    padding: 10px;
+    max-width: 347px;
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+  }
+
+  &__date {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000;
+    margin-bottom: 16px;
+    top: -77px;
+    left: 14px;
+    position: absolute;
+  }
+
+  &__arrows {
+    position: absolute;
+    width: 80px;
+    right: 0;
+    top: 24px;
+  }
+
+  &__arrow {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  &__arrow-left {
+    margin-right: 8px;
+  }
+
+  &__day,
+  &__week {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: repeat(7, 1fr);
+    color: #000000;
+  }
+
+  &__day {
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  &__week-item,
+  &__day-item {
+    width: 40px;
+    height: 40px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  &__day-num {
+    width: 40px;
+    height: 40px;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all .3s ease-in;
+    cursor: pointer;
+  }
+
+  &__day-num:hover {
+    background-color: $accent;
+    color: #ffffff;
+  }
+
+  &__day-input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+  }
+
+  &__day-input:checked+.calendar__day-num {
+    background-color: $accent;
+    color: #ffffff;
+  }
+
+  .last-month {
+    color: #747474;
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 339px;
+    width: 100%;
+    background-color: $accent;
+    border: none;
+    padding: 15px 0;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: block;
+    transition: all .3s ease-in;
+  }
+}
+
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next::after {
+  display: none;
+}

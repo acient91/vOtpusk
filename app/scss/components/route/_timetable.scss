@@ -1,0 +1,360 @@
+.train-content {
+  @include for-470-px {
+    padding-top: 10px;
+  }
+}
+
+.timetable {
+
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  padding-bottom: 60px;
+
+  @include for-1025-px {
+    padding-bottom: 40px;
+  }
+
+  @include for-769-px {
+    padding-bottom: 30px;
+  }
+
+  &__inner {
+    display: none;
+  }
+
+  &__inner--active {
+    display: block;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: left;
+
+    @include for-769-px {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 20px;
+    }
+
+    @include for-470-px {
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+    @include for-769-px {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__links-item {
+    padding: 7px 15px;
+    background-color: $default;
+    color: #979797;
+    @extend %Roboto-700;
+    font-size: 14px;
+    line-height: 16px;
+    min-width: 95px;
+    margin-bottom: 10px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+
+      @include for-470-px {
+        margin-right: 5px;
+      }
+    }
+
+    &:nth-child(3n) {
+      @include for-769-px {
+        display: none;
+      }
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 14px;
+      min-width: 70px;
+    }
+  }
+
+  &__links-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__links-item--active {
+    color: #ffffff;
+    background-color: $accent;
+  }
+
+  &__list {
+    padding: 20px 0 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 50px;
+    position: relative;
+
+    @include for-769-px {
+      padding: 20px 0 40px;
+    }
+
+    @include for-470-px {
+      padding: 10px 0 50px;
+    }
+  }
+
+  &__text-box {
+    font-size: 12px;
+    line-height: 14px;
+    color: #c4c4c4;
+    text-align: right;
+    position: absolute;
+    top: 21px;
+    right: 184px;
+
+    @include for-769-px {
+      right: 145px;
+    }
+
+    @include for-470-px {
+      display: none;
+    }
+  }
+
+  &__text {
+    &:not(:last-child) {
+      margin-right: 29px;
+
+      @include for-769-px {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      border-bottom: 1px dashed $btn;
+    }
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 32px 10px;
+
+    @include for-769-px {
+      padding: 30px 20px 5px 15px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px 5px 15px;
+      flex-direction: column
+    }
+  }
+
+  &__train {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include for-470-px {
+      margin-bottom: 29px;
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__train-number {
+    @extend %Roboto-700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $text;
+    margin-right: 20px;
+
+    @include for-1025-px {
+      max-width: 490px;
+      width: 100%;
+      margin-bottom: 9px;
+    }
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include for-470-px {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__train-number--train {
+    width: auto;
+  }
+
+  &__train-num {
+    margin-right: 12px;
+  }
+
+  &__train-box {
+    @include for-470-px {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__train-type {
+    font-size: 12px;
+    line-height: 14px;
+    color: #979797;
+    margin-right: 20px;
+  }
+
+  &__train-link {
+    font-size: 12px;
+    line-height: 14px;
+    color: $link;
+    text-decoration: underline;
+  }
+
+  &__train-link--all {
+    color: $accent;
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+
+    @include for-470-px {
+      flex-direction: column
+    }
+  }
+
+  &__time-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__time-start,
+  &__time-end {
+    @extend %Roboto-700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $text;
+    position: relative;
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__time-start::before {
+    content: 'Отправление';
+    position: absolute;
+    top: -13px;
+    left: 0;
+    @extend %Roboto-400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #c4c4c4;
+    display: none;
+
+    @include for-470-px {
+      display: block;
+    }
+  }
+
+  &__time-all {
+    display: block;
+    @extend %Roboto-400;
+    color: $text;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0 32px 0 45px;
+    min-width: 50px;
+    position: relative;
+
+    @include for-769-px {
+      margin: 0 20px 0 35px;
+    }
+  }
+
+  &__time-all::before {
+    content: 'В пути';
+    position: absolute;
+    top: -13px;
+    left: 8px;
+    @extend %Roboto-400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #c4c4c4;
+    display: none;
+
+    @include for-470-px {
+      display: block;
+    }
+  }
+
+  &__time-end::before {
+    content: 'Прибытие';
+    position: absolute;
+    top: -13px;
+    right: 0;
+    @extend %Roboto-400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #c4c4c4;
+    display: none;
+
+    @include for-470-px {
+      display: block;
+    }
+  }
+
+  &__time-btn {
+    height: 40px;
+    min-width: 120px;
+    padding: 10px;
+    @extend %Roboto-700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    background-color: $link;
+    margin-left: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include for-769-px {
+      margin-left: 15px;
+    }
+
+    @include for-470-px {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,1149 @@
+.payment {
+  .top {
+    padding: 20px 0 30px;
+
+    @include for-769-px {
+      padding: 10px 0 30px;
+    }
+  }
+
+  .breadcrumbs__list {
+    margin-bottom: 0;
+  }
+
+  .breadcrumbs__item {
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+
+.tickets-payment {
+  padding-bottom: 50px;
+
+  @include for-470-px {
+    padding-bottom: 30px;
+  }
+
+  .container {
+    max-width: 1200px;
+
+    @include for-769-px {
+      padding: 0 20px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  &__step-list {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background: #F5F8FE;
+    border-radius: 0px 20px;
+    position: relative;
+    margin-bottom: 30px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+
+    &::before {
+      border-top: 1px dashed #C4C4C4;
+      top: 0;
+    }
+
+    &::after {
+      border-bottom: 1px dashed #C4C4C4;
+      bottom: 0;
+    }
+
+    @include for-1025-px {
+      margin-bottom: 25px;
+    }
+
+    @include for-769-px {
+      margin-bottom: 20px;
+    }
+
+    @include for-470-px {
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__step-item {
+    padding: 10px 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include for-1025-px {
+      padding: 10px 20px 20px;
+    }
+
+    @include for-769-px {
+      padding: 17px 15px;
+    }
+
+    @include for-470-px {
+      width: 22%;
+      align-items: center;
+    }
+
+    &:nth-child(-n+2) {
+      @include for-470-px {
+        display: none;
+      }
+    }
+
+    &:nth-child(3) {
+      @include for-470-px {
+        .tickets-payment__step-title {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__step-item--active {
+    background-color: #EBF1FD;
+    border-radius: 0px 20px;
+
+    .tickets-payment__step-subtitle,
+    .tickets-payment__step-title {
+      color: $link;
+    }
+
+    @include for-470-px {
+      width: 80%;
+      align-items: flex-start;
+
+      .tickets-payment__step-subtitle {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__step-subtitle {
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    margin-bottom: 5px;
+
+    @include for-470-px {
+      margin-bottom: 0;
+    }
+  }
+
+  &__step-title {
+    @extend %Roboto-700;
+    font-size: 20px;
+    line-height: 23px;
+
+    @include for-1025-px {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-align: left;
+
+    @include for-769-px {
+      font-size: 20px;
+      line-height: 23px;
+    }
+
+    @include for-470-px {
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+
+    @include for-769-px {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    flex-basis: 820px;
+    margin-right: 20px;
+
+    @include for-1025-px {
+      flex-basis: 640px;
+    }
+
+    @include for-769-px {
+      flex-basis: auto;
+      margin-right: 0;
+    }
+  }
+
+  &__list {
+    padding-bottom: 20px;
+  }
+
+  &__item {
+    border: 1px dashed $btn;
+    border-radius: 0px 50px;
+    padding: 28px 19px 50px;
+    margin-bottom: 30px;
+  }
+
+  &__item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+    @include for-470-px {
+      align-items: flex-start;
+    }
+  }
+
+  &__passenger-num {
+    @extend %Roboto-700;
+    font-size: 20px;
+    line-height: 23px;
+
+    @include for-470-px {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__passenger-info {
+    color: #C4C4C4;
+    font-size: 20px;
+    line-height: 23px;
+
+    @include for-470-px {
+      display: block;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__passenger-clear {
+    font-size: 14px;
+    line-height: 16px;
+    color: $link;
+    text-decoration: underline;
+  }
+
+  &__gender {
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 34px;
+
+    @include for-470-px {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__gender-text {
+    margin-right: 50px;
+  }
+
+  &__gender-label {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__gender-input {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    position: absolute;
+
+    &:checked+.tickets-payment__gender-name {
+
+      @extend %Roboto-700;
+      color: $text;
+
+      &::before {
+        border: 4px solid $accent;
+      }
+    }
+  }
+
+  &__gender-name {
+    color: #C4C4C4;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: -24px;
+      top: -1px;
+      border: 1px solid #C4C4C4;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: block;
+    }
+  }
+
+  &__document {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include for-1025-px {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    @include for-769-px {
+      gap: 30px;
+    }
+
+    @include for-470-px {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  &__document-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 180px;
+
+    @include for-1025-px {
+      width: 100%;
+    }
+  }
+
+  &__document-box-date {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 13px;
+      bottom: 13px;
+      width: 15px;
+      height: 16px;
+      background-image: url('../images/calendar.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__document-text {
+    font-size: 13px;
+    line-height: 16px;
+    margin-bottom: 5px;
+  }
+
+  &__document-input {
+    padding: 12px 13px;
+    border: 1px solid #C4C4C4;
+    border-radius: 0;
+    outline: #C4C4C4;
+    font-size: 14px;
+    line-height: 16px;
+    width: 100%;
+    height: 40px;
+
+    &::placeholder {
+      color: #C4C4C4;
+    }
+  }
+
+  &__document-input-date {
+    padding-left: 40px;
+  }
+
+  &__card {
+    border-top: 1px dashed #C4C4C4;
+    border-bottom: 1px dashed #C4C4C4;
+    padding: 15px 0 20px;
+    margin-top: 20px;
+  }
+
+  &__card-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    color: $link;
+  }
+
+  &__card-bonus {
+    text-transform: uppercase;
+  }
+
+  &__card-del {
+    text-decoration: underline;
+  }
+
+  &__card-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .tickets-payment__document-box {
+      margin-right: 20px;
+      max-width: 180px;
+      width: 100%;
+
+      @include for-470-px {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    @include for-470-px {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__card-text,
+  &__info-text {
+    font-size: 12px;
+    line-height: 14px;
+    color: #C4C4C4;
+  }
+
+  &__card-text {
+    margin-bottom: 6px;
+
+    @include for-1025-px {
+      margin-bottom: 0;
+      font-size: 11px;
+      line-height: 13px;
+      flex-shrink: 2;
+    }
+  }
+
+  &__info {
+    padding-top: 20px;
+    display: flex;
+    align-items: flex-end;
+
+    @include for-470-px {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .tickets-payment__document-box {
+      margin-right: 20px;
+      max-width: 180px;
+      width: 100%;
+
+      @include for-470-px {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__info-text {
+    margin-bottom: 14px;
+
+    @include for-1025-px {
+      font-size: 11px;
+      line-height: 13px;
+      margin-bottom: 6px;
+    }
+
+    @include for-769-px {
+      margin-bottom: 13px;
+    }
+  }
+
+  &__add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @include for-470-px {
+      flex-direction: column;
+    }
+  }
+
+  &__add-btn {
+    margin-right: 11px;
+    width: 177px;
+    height: 50px;
+    background-color: $accent;
+    @extend %Roboto-700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #ffffff;
+
+    @include for-470-px {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__add-text {
+    @extend %Roboto-700;
+  }
+
+  &__information-inner {
+    border: 1px dashed $btn;
+    border-radius: 0px 50px;
+    padding: 28px 20px 50px;
+    margin-bottom: 20px;
+
+    .tickets-payment__info-text {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__information-title {
+    @extend %Roboto-700;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 20px;
+  }
+
+  &__price-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    @include for-769-px {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__price-text {
+    color: $link;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__price-sum {
+    @extend %Roboto-700;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 10px;
+
+    @include for-470-px {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__price-num {
+    font-size: 25px;
+    line-height: 29px;
+    color: $accent;
+  }
+
+  &__price-info {
+    font-size: 14px;
+    line-height: 16px;
+    color: #C4C4C4;
+
+    @include for-470-px {
+      text-align: center;
+    }
+  }
+
+  &__choose-title {
+    text-align: left;
+    margin-bottom: 25px;
+
+    @include for-769-px {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 10px;
+    }
+
+    @include for-470-px {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__choose-box {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #C4C4C4;
+
+    @include for-470-px {
+      flex-direction: column;
+    }
+  }
+
+  &__choose-card,
+  &__choose-other {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    @include for-470-px {
+      width: 100%;
+    }
+  }
+
+  &__choose-card {
+    margin-right: 7px;
+
+    @include for-470-px {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__choose-card-top {
+    padding: 15px 0;
+    background-color: $link;
+    text-align: center;
+    @extend %Roboto-700;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 10px;
+  }
+
+  &__choose-card-bottom {
+    display: flex;
+    justify-content: center;
+    border: 1px solid $link;
+    padding: 20px 50px 26px 46px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 4px solid $accent;
+      border-radius: 50%;
+      left: 17px;
+      top: 20px;
+    }
+
+    @include for-470-px {
+      flex-direction: column;
+      padding: 20px 0 20px 46px;
+    }
+  }
+
+  &__choose-card-img {
+    width: 40px;
+    height: 30px;
+    margin-right: 14px;
+
+    @include for-470-px {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__choose-card-text {
+    @extend %Roboto-700;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__choose-card-subtext {
+    font-size: 12px;
+    line-height: 14px;
+    color: #979797;
+    display: block;
+  }
+
+  &__choose-other {
+    .tickets-payment__choose-card-top {
+      background-color: #E1F0FF;
+      color: #979797;
+    }
+
+    justify-content: space-between;
+  }
+
+  &__choose-other-text {
+    font-size: 12px;
+    line-height: 14px;
+    color: #979797;
+    margin-bottom: 20px;
+  }
+
+  &__choose-bottom {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    @include for-470-px {
+      flex-direction: column;
+    }
+  }
+
+  &__choose-btn {
+    width: 177px;
+    height: 50px;
+    background-color: $accent;
+    @extend %Roboto-700;
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    @include for-470-px {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+
+  &__choose-assent-box {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__choose-assent-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  &__choose-assent-text {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__choose-assent-link {
+    @extend %Roboto-700;
+    color: $accent;
+    text-decoration: underline;
+  }
+
+  &__choose-assent-link--last {
+    display: block;
+  }
+
+  &__aside {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #EBF1FD;
+    border-radius: 0px 20px;
+    flex-basis: 300px;
+    height: 100%;
+    margin-top: 55px;
+
+    @include for-769-px {
+      margin-top: 0;
+      flex-basis: auto;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__aside-title {
+    @extend %Roboto-700;
+    font-size: 20px;
+    line-height: 23px;
+    padding: 20px;
+  }
+
+
+  &__aside-inner {
+    @include for-769-px {
+      display: flex;
+    }
+
+    @include for-470-px {
+      flex-direction: column;
+    }
+  }
+
+  &__aside-item {
+    @include for-769-px {
+      width: 50%;
+
+      &:not(:last-child) {
+        margin-right: 1px;
+      }
+    }
+
+    @include for-470-px {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__aside-top {
+    padding: 16px 20px;
+    background-color: $main;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__aside-name {
+    @extend %Roboto-700;
+    color: $link;
+    text-transform: uppercase;
+  }
+
+  &__aside-link {
+    font-size: 14px;
+    line-height: 16px;
+    color: $link;
+    text-decoration: underline;
+  }
+
+  &__aside-link--active {}
+
+
+  &__aside-train {
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  &__aside-tain-num {
+    @extend %Roboto-700;
+    font-size: 20px;
+    line-height: 23px;
+    color: $link;
+    margin-bottom: 10px;
+  }
+
+  &__aside-tain-city {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 5px;
+  }
+
+  &__aside-tain-type {
+    font-size: 12px;
+    line-height: 14px;
+    color: #C4C4C4;
+  }
+
+  &__aside-route {
+    padding: 0 20px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 4px;
+      height: 94px;
+      background-color: $accent;
+      left: 26px;
+      top: 33px;
+    }
+  }
+
+  &__aside-route-box {
+    padding: 20px 30px;
+    border-top: 1px dashed #C4C4C4;
+    font-size: 12px;
+    line-height: 14px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      border: 4px solid $accent;
+      left: 0;
+      top: 20px;
+    }
+
+    &:last-child {
+      border-bottom: 1px dashed #C4C4C4;
+      border-top: none;
+    }
+  }
+
+  &__aside-route-text {
+    @extend %Roboto-700;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__aside-route-date {
+    margin-bottom: 10px;
+  }
+
+  &__aside-route-day {
+    margin-left: 10px;
+    color: #C4C4C4;
+  }
+
+  &__aside-route-city {
+    color: $link;
+  }
+
+  &__aside-wagon {
+    padding: 20px 20px 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__aside-wagon-num {
+    @extend %Roboto-900;
+    color: $link;
+    margin-bottom: 5px;
+  }
+
+  &__aside-wagon-info {
+    font-size: 14px;
+    line-height: 16px;
+    color: #C4C4C4;
+    margin-bottom: 20px;
+  }
+
+  &__aside-wagon-place {
+    @extend %Roboto-700;
+    font-size: 12px;
+    line-height: 14px;
+    margin-right: 10px;
+    display: block;
+
+    span {
+      @extend %Roboto-400;
+      margin-left: 10px;
+    }
+  }
+
+  .jq-selectbox {
+    width: 100%;
+  }
+
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 12px 20px 12px 13px;
+    border: 1px solid #C4C4C4;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    color: #000;
+    text-shadow: none;
+    font-family: "Roboto-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    outline: transparent;
+  }
+
+  .jq-selectbox__trigger-arrow {
+    position: absolute;
+    top: 15px;
+    right: 14px;
+    width: 13px;
+    height: 8px;
+    border: transparent;
+    background-image: url('../images/icons/arrow-down.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .jq-selectbox__trigger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: none;
+  }
+
+  .jq-selectbox__dropdown {
+    max-height: 290px;
+  }
+
+  .jq-selectbox.focused .jq-selectbox__select {
+
+    border: 1px solid #C4C4C4;
+  }
+
+  .jq-selectbox__select-text {
+    @extend %Roboto-700;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text;
+  }
+}
+
+.tickets-attention {
+  .container {
+    @include for-470-px {
+      padding: 0 20px;
+    }
+  }
+
+  padding: 40px 0 70px;
+  background: #EBF1FD;
+  border-radius: 0px 150px;
+
+  @include for-1025-px {
+    border-radius: 0px 50px;
+  }
+
+  @include for-769-px {
+    padding: 30px 0 40px;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 20px;
+
+    @include for-769-px {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 10px;
+    }
+
+    @include for-470-px {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__text {
+    @extend %Roboto-300;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include for-470-px {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
+
+.tickets-info {
+  padding: 70px 0 90px;
+
+  @include for-769-px {
+    padding: 40px 0 50px;
+  }
+
+  @include for-470-px {
+    .container {
+      padding: 0 20px;
+    }
+
+    padding: 20px 0 70px;
+  }
+
+  .tickets-buy__list {
+    margin-bottom: 80px;
+
+    @include for-769-px {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__partners {
+    background-color: #F5F5F5;
+    border-radius: 0px 150px;
+    padding: 40px 0 50px;
+
+    @include for-1025-px {
+      border-radius: 0px 50px;
+    }
+
+    @include for-769-px {
+      padding: 30px 0 40px;
+    }
+
+    @include for-470-px {
+      padding-bottom: 0;
+    }
+  }
+
+  &__partners-title {
+    text-align: left;
+    margin-bottom: 14px;
+
+    @include for-769-px {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 10px;
+    }
+
+    @include for-470-px {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__partners-img {
+    display: block;
+
+    @include for-470-px {
+      display: none;
+    }
+  }
+
+  &__partners-mobile {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include for-470-px {
+      display: flex;
+    }
+  }
+
+  &__partners-mob-img {
+    &:not(:last-child) {
+      margin-bottom: 44px;
+    }
+  }
+}

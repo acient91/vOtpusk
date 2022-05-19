@@ -1,0 +1,242 @@
+.tickets-search-three {
+  .slick-arrow {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+
+    path {
+      stroke: #225999;
+    }
+  }
+
+  .slick-prev {
+    transform: rotate(90deg);
+    left: -50px;
+    top: 10px;
+
+    @include for-470-px {
+      left: -45px;
+    }
+  }
+
+  .slick-next {
+    transform: rotate(-90deg);
+    right: -50px;
+    top: 10px;
+
+    @include for-470-px {
+      right: -45px;
+    }
+  }
+
+  .container {
+    padding: 0 15px;
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  padding: 30px 0 50px;
+
+  .tickets-search-one__step-item {
+    padding: 10px 10px 20px 30px;
+
+    &:first-child {
+      width: 210px;
+      border-radius: 0 0 0 20px;
+    }
+
+    &:nth-child(2n) {
+      border-radius: 0;
+    }
+
+    @include for-1025-px {
+      padding: 10px 15px 20px 20px;
+      width: 223px;
+
+      &:first-child {
+        width: 170px;
+      }
+    }
+
+    @include for-769-px {
+      padding: 17px 15px;
+      width: 175px;
+
+      &:first-child {
+        width: 130px;
+      }
+    }
+
+    @include for-470-px {
+      width: auto;
+
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+
+  .tickets-search-one__step-item--active {
+    width: 300px;
+    margin-left: -15px;
+    padding-right: 50px;
+
+    @include for-1025-px {
+      padding-right: 15px;
+      width: 240px;
+    }
+
+    @include for-769-px {
+      width: 190px;
+    }
+
+    @include for-470-px {
+      margin-left: 0;
+    }
+  }
+
+  .tickets-search-one__step {
+    margin-bottom: 62px;
+
+    @include for-470-px {
+      margin-bottom: 67px;
+    }
+  }
+
+  .tickets-search-one__step::before {
+    top: -1px;
+  }
+
+  .tickets-search-one__step-list {
+    position: relative;
+  }
+
+  .tickets-search-one__date {
+    display: none;
+  }
+
+  .tickets-search-one__date {
+    @include for-470-px {
+      display: flex;
+    }
+  }
+
+  .tickets-search-one__step-item-try {
+    background-color: #ffffff;
+
+    @include for-769-px {
+      padding: 17px 0 17px 15px;
+    }
+
+    @include for-470-px {
+      padding: 17px 15px;
+    }
+  }
+
+  .tickets-search-one__step-title,
+  .tickets-search-one__step-title-try {
+    @include for-1025-px {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    @include for-769-px {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    background-color: #F5F8FE;
+    border-radius: 0px 10px;
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    width: 100%;
+    bottom: -53px;
+    display: none;
+
+    @include for-470-px {
+      display: block;
+    }
+  }
+
+  &__box-train {
+    color: $link;
+  }
+
+  &__box-price {
+    display: block;
+    color: $accent;
+    font-weight: 700;
+  }
+
+  &__search-input-date {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 0;
+    border: none;
+    outline: transparent;
+
+    &::placeholder {
+      color: #B6CCE4;
+    }
+  }
+
+  &__search-input-date--one {
+    border-right: 1px dashed $link;
+
+    @include for-1025-px {
+      border-right: none;
+      margin-bottom: 1px;
+    }
+  }
+
+  &__search-input-date {
+    padding-left: 38px;
+  }
+
+  &__calendar {
+    padding: 10px !important;
+    background: #fff;
+    z-index: 2000 !important;
+    filter: none !important;
+    width: auto !important;
+    top: 602px !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+
+    @include for-1025-px {
+      top: 586px !important;
+    }
+
+    @include for-769-px {
+      top: 431px !important;
+      width: 320px !important;
+      margin-top: auto !important;
+      left: 50% !important;
+      transform: translate(-50%) !important;
+    }
+
+    @include for-470-px {
+      top: 477px !important;
+    }
+
+    .ui-datepicker-group+.ui-datepicker-group {
+      margin-top: 0;
+    }
+  }
+}

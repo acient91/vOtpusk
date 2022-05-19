@@ -1,0 +1,85 @@
+.train-content-three {
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  padding-bottom: 50px;
+
+  .timetable__box {
+    padding: 20px 32px 10px;
+
+    @include for-769-px {
+      padding: 20px 20px 10px;
+    }
+
+    @include for-470-px {
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 12px 0;
+    }
+  }
+
+  .timetable__links,
+  .timetable__text-box,
+  .timetable__time-start,
+  .timetable__time-all {
+    display: none;
+  }
+
+  .timetable__train {
+    width: 100%;
+    justify-content: space-between;
+
+    @include for-470-px {
+      margin-bottom: 20px;
+      margin-top: 15px;
+    }
+  }
+
+  .timetable__train-type {
+    flex: auto;
+
+    @include for-470-px {
+      margin-bottom: 10px;
+    }
+  }
+
+  .timetable__time-btn {
+    margin-left: 127px;
+
+    @include for-1025-px {
+      margin-left: 50px;
+    }
+
+    @include for-470-px {
+      width: 120px;
+      margin-left: 15px;
+    }
+  }
+
+  .timetable__title {
+    font-size: 20px;
+    line-height: 23px;
+
+    @include for-470-px {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .timetable__list {
+    @include for-769-px {
+      padding: 10px 0 40px;
+    }
+
+    @include for-470-px {
+      padding: 10px 0 20px;
+    }
+  }
+}

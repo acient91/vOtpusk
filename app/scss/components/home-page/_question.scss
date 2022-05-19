@@ -1,0 +1,155 @@
+.question {
+
+  .container {
+    @include for-470-px {
+      padding: 0;
+    }
+  }
+
+  padding: 35px 0 50px;
+  background-color: $main;
+  border-radius: 0 150px 0 0;
+
+  @include for-470-px {
+    font-size: 24px;
+    line-height: 28px;
+    border-radius: 0 50px 0 0;
+  }
+
+  &__title {
+    @include for-470-px {
+      font-size: 24px;
+      line-height: 28px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 44px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 50px;
+
+    @include for-769-px {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include for-470-px {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 30px;
+    }
+  }
+
+  &__item {
+    padding: 0 25px 10px 20px;
+    max-width: 260px;
+    min-height: 90px;
+    width: 100%;
+    border-right: 1px dashed $btn;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include for-769-px {
+      max-width: 325px;
+      padding: 0 25px 10px 35px;
+      border: none;
+
+      &:nth-child(even) {
+        border-left: 1px dashed $btn;
+      }
+    }
+
+    @include for-470-px {
+      padding: 0 0 30px 0;
+      border-bottom: 1px dashed $btn;
+      max-width: 100%;
+
+      &:nth-child(even) {
+        border-left: none;
+      }
+
+      &:nth-child(n+5) {
+        display: none;
+      }
+    }
+
+    &:nth-child(4n) {
+      border: none;
+
+      @include for-470-px {
+        border-bottom: 1px dashed $btn;
+      }
+
+      &:nth-child(even) {
+        @include for-769-px {
+          border-left: 1px dashed $btn;
+        }
+
+        @include for-470-px {
+          border-left: none;
+        }
+      }
+    }
+  }
+
+  &__item-link {
+    @extend %Roboto-700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $text;
+
+    @include for-470-px {
+      margin-left: 20px;
+    }
+  }
+
+  &__item-text {
+    color: #979797;
+    font-size: 12px;
+    line-height: 14px;
+
+    @include for-470-px {
+      margin-left: 20px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding-right: 38px;
+    text-align: right;
+    color: $link;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: underline;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 14px;
+      top: 2px;
+      right: 0;
+      background-image: url('../images/icons/arrow-right.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      @include for-470-px {
+        width: 17px;
+        height: 10px;
+        right: 60px;
+      }
+    }
+
+    @include for-470-px {
+      width: 280px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

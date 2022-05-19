@@ -1,0 +1,375 @@
+.transfer {
+
+  .container {
+    @include for-769-px {
+      padding: 0 20px;
+    }
+
+    @include for-470-px {
+      padding: 0 10px;
+    }
+  }
+
+  padding: 50px 0;
+
+  @include for-1025-px {
+    padding: 40px 0;
+  }
+
+  @include for-769-px {
+    padding: 40px 0 30px;
+  }
+
+  @include for-470-px {
+    padding: 20px 0 30px;
+  }
+
+  &__search {
+    padding-bottom: 60px;
+
+    @include for-1025-px {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__search-title,
+  &__station-title,
+  &__station-subtitle {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  &__search-title {
+    @include for-769-px {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 30px;
+    }
+
+    @include for-470-px {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__station-title {
+    @include for-1025-px {
+      margin-bottom: 20px;
+    }
+
+    @include for-769-px {
+      font-size: 20px;
+      line-height: 23px;
+    }
+
+    @include for-470-px {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__station-subtitle {
+    font-size: 25px;
+    line-height: 29px;
+    margin-bottom: 20px;
+
+    @include for-470-px {
+      font-size: 16px;
+      line-height: 19px;
+      margin-left: 10px;
+    }
+  }
+
+  &__search-wrapper {
+    padding: 56px 46px 60px 70px;
+    background-color: $main;
+    border-radius: 0 100px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-end;
+
+    @include for-1025-px {
+      padding: 56px 25px 60px 40px;
+    }
+
+    @include for-769-px {
+      padding: 40px 30px 40px 30px;
+      border-radius: 0px 50px;
+      margin-bottom: 25px;
+    }
+
+    @include for-470-px {
+      padding: 30px 20px 40px 20px;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 44px;
+    }
+  }
+
+  &__search-box {
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    width: 100%;
+  }
+
+  &__search-box--two {
+    position: relative;
+  }
+
+  &__search-swipe {
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    background-image: url(../images/swap-btn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 35px;
+    left: -12px;
+    z-index: 10;
+
+    @include for-769-px {
+      width: 22px;
+      height: 25px;
+      top: 29px;
+    }
+
+    @include for-470-px {
+      top: -13px;
+      right: 13px;
+      left: auto;
+      transform: rotate(90deg);
+    }
+  }
+
+  &__search-text {
+    padding-left: 20px;
+    margin-bottom: 7px;
+    @extend %Roboto-500;
+    font-size: 12px;
+    line-height: 14px;
+    color: $link;
+
+    @include for-470-px {
+      display: none;
+    }
+  }
+
+  &__search-text--two {
+    padding-left: 40px;
+  }
+
+  &__search-input {
+    padding: 20px;
+    height: 63px;
+    background-color: #ffffff;
+    border: none;
+    color: $text;
+    outline: none;
+
+    &::placeholder {
+      font-size: 20px;
+      line-height: 23px;
+      color: #B6CCE4;
+
+      @include for-769-px {
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    @include for-769-px {
+      height: 40px;
+    }
+
+    @include for-470-px {
+      padding: 12px 20px;
+    }
+  }
+
+  &__search-input--two {
+    padding: 20px 20px 20px 40px;
+    border-left: 1px dashed $btn;
+
+    @include for-470-px {
+      padding: 12px 20px;
+      margin-top: 1px;
+      margin-bottom: 10px;
+      border-left: none;
+    }
+  }
+
+  &__search-btn {
+    @extend %Roboto-700;
+    margin-left: 10px;
+    padding: 20px;
+    height: 63px;
+    background-color: $link;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    line-height: 23px;
+    max-width: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include for-769-px {
+      height: 40px;
+      max-width: 105px;
+      padding: 0;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @include for-470-px {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__search-services {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    @include for-1025-px {
+      justify-content: space-between;
+    }
+
+    @include for-470-px {
+      flex-direction: column;
+    }
+  }
+
+  &__search-item {
+    padding-left: 65px;
+    width: 290px;
+    font-size: 20px;
+    line-height: 23px;
+    color: $text;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @include for-769-px {
+        top: -5px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 40px;
+
+      @include for-470-px {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+
+    @include for-769-px {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    &:nth-child(1) {
+      @include for-470-px {
+        margin-bottom: 43px;
+      }
+    }
+  }
+
+  &__search-item--free::before {
+    background-image: url('../images/icons/free.svg');
+  }
+
+  &__search-item--hour::before {
+    background-image: url('../images/icons/hour.svg');
+  }
+
+  &__search-item--time::before {
+    background-image: url('../images/icons/time.svg');
+  }
+
+  &__station {
+    padding-bottom: 40px;
+
+    @include for-1025-px {
+      padding-bottom: 20px;
+    }
+
+    @include for-769-px {
+      padding-bottom: 0;
+    }
+  }
+
+  &__station-map {
+    width: 100%;
+    max-height: 500px;
+    margin-bottom: 40px;
+
+    @include for-470-px {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__station-list {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 100px;
+    overflow: hidden;
+    align-items: center;
+
+    @include for-769-px {
+      border-radius: 0 50px;
+    }
+
+    @include for-470-px {
+      flex-direction: column;
+      border-radius: 0;
+    }
+  }
+
+  &__station-item {
+    max-width: 350px;
+
+    @include for-470-px {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      padding: 0 10px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 45px;
+
+      @include for-1025-px {
+        margin-right: 17px;
+      }
+
+      @include for-769-px {
+        margin-right: 27px;
+      }
+
+      @include for-470-px {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__station-image {
+    width: 100%;
+    height: auto;
+  }
+}
