@@ -1,6 +1,33 @@
 const reviesList = document.querySelectorAll('.train-reviews__item');
 const body = document.querySelector('body');
 
+const burgerMenu = () => {
+  const burger = document.querySelector('.header__burger');
+  const headerNav = document.querySelector('.header__nav');
+
+  burger.addEventListener('click', () => {
+    if (burger.classList.contains('header__burger--open')) {
+      burger.classList.remove('header__burger--open')
+      headerNav.classList.remove('header__nav--open')
+    } else if (burger.classList.contains('header__burger')) {
+      burger.classList.add('header__burger--open')
+      headerNav.classList.add('header__nav--open')
+    }
+  })
+}
+burgerMenu();
+
+//Обрезание текста отзыва
+const textClipping = () => {
+  let textReview = document.querySelectorAll('.slider-reviews__text > p');
+
+  textReview.forEach((item) => {
+    if (item.textContent.trim().length > 262) {
+      item.textContent = item.textContent.trim().substring(0, 262).concat('...');
+    }
+  })
+}
+textClipping();
 
 const wagonTop = () => {
   const wagonTrain = document.querySelectorAll('.tickets-search-one__wagon-top-train');
@@ -224,11 +251,11 @@ new Swiper('.slider-reviews__inner', {
     prevEl: ".slider-reviews__btn-prev",
   },
   breakpoints: {
-    470: {
+    600: {
       spaceBetween: 8,
       slidesPerView: 2,
     },
-    768: {
+    915: {
       spaceBetween: 17,
       slidesPerView: 3,
     },
@@ -364,10 +391,7 @@ const tabTrainPage = () => {
     item.addEventListener('click', function (e) {
       e.preventDefault();
 
-      if (this.classList.contains('search__top-item--active')) {
-        // this.classList.remove('search__top-item--active');
-        // searchItem[i].classList.remove('search__content-item--active');
-      } else {
+      if (this.classList.contains('search__top-item--active')) {} else {
         menuTrainHome.forEach((item, i) => {
           item.classList.remove('search__top-item--active');
           searchItem[i].classList.remove('search__content-item--active');
@@ -661,13 +685,13 @@ $(function () {
     nextText: '',
     showOtherMonths: true,
     numberOfMonths: 2,
-    beforeShow(input, obj) {
-      if (input.closest('.search-to')) {
-        document.querySelector('#ui-datepicker-div').classList.add('search__mobile-to-calendar');
-      };
-      obj.dpDiv[0].style.marginTop = input.offsetTop + input.offsetHeight + 5 + 'px'
-      obj.dpDiv[0].dataset.title = input.dataset.title
-    },
+    // beforeShow(input, obj) {
+    //   if (input.closest('.search-to')) {
+    //     document.querySelector('#ui-datepicker-div').classList.add('search__mobile-to-calendar');
+    //   };
+    //   obj.dpDiv[0].style.marginTop = input.offsetTop + input.offsetHeight + 5 + 'px'
+    //   obj.dpDiv[0].dataset.title = input.dataset.title
+    // },
   });
 
   $(".search__mobile-date").datepicker({

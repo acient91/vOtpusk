@@ -9,6 +9,14 @@
     }
   }
 
+  .header__burger {
+    background-image: url('../images/icons/burger.svg');
+  }
+
+  .header__burger--open {
+    background-image: url('../images/icons/close-burger.svg');
+  }
+
   .top__inner {
     display: none;
   }
@@ -130,15 +138,6 @@
       line-height: 14px;
       letter-spacing: 1.2px;
     }
-  }
-
-  &__lk-btn {
-    width: 23px;
-    height: 16px;
-    background-image: url('../images/icons/burger.svg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 
   &__content {

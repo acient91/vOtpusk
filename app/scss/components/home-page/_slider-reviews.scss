@@ -30,6 +30,10 @@
     border-radius: 0 120px;
     position: static;
 
+    @include for-1025-px {
+      border-radius: 0 80px;
+    }
+
     @include for-470-px {
       border-radius: 0 0 0 50px;
     }
@@ -37,7 +41,7 @@
 
   &__item {
     width: 350px;
-    min-height: 312px;
+    max-height: 330px;
     display: flex;
     flex-direction: column;
 
@@ -87,12 +91,13 @@
   }
 
   &__text {
-    padding: 20px 40px 55px 30px;
+    padding: 20px 30px 55px 30px;
     background-color: $default;
     @extend %Roboto-300;
     color: $text;
     font-size: 16px;
     line-height: 19px;
+    height: 133px;
   }
 
   &__links {
