@@ -1,17 +1,200 @@
 const reviesList = document.querySelectorAll('.train-reviews__item');
 const body = document.querySelector('body');
 
+//мобильное меню
+const menuTitle = () => {
+  const menuLink = document.querySelectorAll('.header__nav-title');
+  const navBox = document.querySelectorAll('.header__nav-box');
+
+  menuLink.forEach((item, i) => {
+    item.addEventListener('click', function () {
+      if (this.classList.contains('header__nav-title')) {
+        if (navBox[i].classList.contains('header__nav-box--active')) {
+          navBox[i].classList.remove('header__nav-box--active')
+        } else {
+          navBox[i].classList.add('header__nav-box--active')
+        }
+      }
+    })
+  })
+};
+menuTitle()
+
+//Поиск по сайту
+const searchMob = () => {
+  const headHeader = document.querySelector('.head__header');
+  const header = document.querySelector('.header');
+
+  body.addEventListener('click', (e) => {
+
+    if (document.querySelector('.head__header')) {
+      if (e.target.classList.contains('head__search-btn--mobile')) {
+        headHeader.classList.add('head__header--search-show')
+      } else if (e.target.classList.contains('head__header--search-show') ||
+        e.target.classList.contains('head__title') ||
+        e.target.classList.contains('header__burger')) {
+        headHeader.classList.remove('head__header--search-show')
+      }
+    };
+
+    if (document.querySelector('.header')) {
+      if (e.target.classList.contains('header__search-btn--mobile')) {
+        header.classList.add('head__header--search-show')
+      } else if (e.target.classList.contains('head__header--search-show') ||
+        e.target.classList.contains('head__title') ||
+        e.target.classList.contains('header__burger')) {
+        header.classList.remove('head__header--search-show')
+      }
+    }
+  })
+}
+searchMob();
+
+//прилипающая менюшка
+const scrollMenu = () => {
+  if (document.querySelector('.top__buttons')) {
+    const topBtn = document.querySelectorAll('.top__buttons-btn');
+    const topInner = document.querySelector('.top__inner');
+
+    const hotel = document.getElementById('hotel');
+    const transfer = document.getElementById('transfer');
+    const reviews = document.getElementById('reviews');
+    const timetable = document.getElementById('timetable');
+
+    topBtn.forEach((item) => {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = item.getAttribute('href').slice(1);
+        document.getElementById(id).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      });
+    });
+
+    const btnInner = document.querySelector('.top__buttons');
+    const btnInnerOffsetTop = btnInner.offsetTop;
+
+    window.addEventListener('scroll', () => {
+      let scrollDistance = window.scrollY;
+
+      if (scrollDistance > btnInnerOffsetTop) {
+        topInner.classList.add('top__inner--active');
+      } else if (scrollDistance < btnInnerOffsetTop) {
+        topInner.classList.remove('top__inner--active');
+      }
+
+      if (timetable.offsetTop - btnInner.clientHeight <= scrollDistance) {
+        topBtn.forEach((el) => {
+          if (el.classList.contains('top__buttons-btn--active')) {
+            el.classList.remove('top__buttons-btn--active');
+          }
+        });
+        topBtn[0].classList.add('top__buttons-btn--active');
+      };
+      if (hotel.offsetTop - btnInner.clientHeight <= scrollDistance) {
+        topBtn.forEach((el) => {
+          if (el.classList.contains('top__buttons-btn--active')) {
+            el.classList.remove('top__buttons-btn--active');
+          }
+        });
+        topBtn[1].classList.add('top__buttons-btn--active');
+      };
+      if (transfer.offsetTop - btnInner.clientHeight <= scrollDistance) {
+        topBtn.forEach((el) => {
+          if (el.classList.contains('top__buttons-btn--active')) {
+            el.classList.remove('top__buttons-btn--active');
+          }
+        });
+        topBtn[2].classList.add('top__buttons-btn--active');
+      };
+      if (reviews.offsetTop - btnInner.clientHeight <= scrollDistance) {
+        topBtn.forEach((el) => {
+          if (el.classList.contains('top__buttons-btn--active')) {
+            el.classList.remove('top__buttons-btn--active');
+          }
+        });
+        topBtn[3].classList.add('top__buttons-btn--active');
+      };
+    });
+  }
+
+  //   const btnInnerOffsetTop = btnInner.offsetTop;
+
+  // window.addEventListener('scroll', () => {
+  //   let scrollDistance = window.scrollY;
+
+  //   if (scrollDistance > btnInnerOffsetTop) {
+  //     topInner.classList.add('top__inner--active');
+  //   } else if (scrollDistance < btnInnerOffsetTop) {
+  //     topInner.classList.remove('top__inner--active');
+  //   }
+
+  //   if (timetable.offsetTop - btnInner.clientHeight <= scrollDistance) {
+  //     topBtn.forEach((el) => {
+  //       if (el.classList.contains('top__buttons-btn--active')) {
+  //         el.classList.remove('top__buttons-btn--active');
+  //       }
+  //     });
+  //     topBtn[0].classList.add('top__buttons-btn--active');
+  //   };
+  //   if (hotel.offsetTop - btnInner.clientHeight <= scrollDistance) {
+  //     topBtn.forEach((el) => {
+  //       if (el.classList.contains('top__buttons-btn--active')) {
+  //         el.classList.remove('top__buttons-btn--active');
+  //       }
+  //     });
+  //     topBtn[1].classList.add('top__buttons-btn--active');
+  //   };
+  //   if (transfer.offsetTop - btnInner.clientHeight <= scrollDistance) {
+  //     topBtn.forEach((el) => {
+  //       if (el.classList.contains('top__buttons-btn--active')) {
+  //         el.classList.remove('top__buttons-btn--active');
+  //       }
+  //     });
+  //     topBtn[2].classList.add('top__buttons-btn--active');
+  //   };
+  //   if (reviews.offsetTop - btnInner.clientHeight <= scrollDistance) {
+  //     topBtn.forEach((el) => {
+  //       if (el.classList.contains('top__buttons-btn--active')) {
+  //         el.classList.remove('top__buttons-btn--active');
+  //       }
+  //     });
+  //     topBtn[3].classList.add('top__buttons-btn--active');
+  //   };
+  // });
+};
+scrollMenu();
+
+//бургер меню
 const burgerMenu = () => {
   const burger = document.querySelector('.header__burger');
   const headerNav = document.querySelector('.header__nav');
+  const userIcon = document.querySelector('.header__lk-svg');
 
   burger.addEventListener('click', () => {
-    if (burger.classList.contains('header__burger--open')) {
-      burger.classList.remove('header__burger--open')
-      headerNav.classList.remove('header__nav--open')
-    } else if (burger.classList.contains('header__burger')) {
-      burger.classList.add('header__burger--open')
-      headerNav.classList.add('header__nav--open')
+    if (document.querySelector('.header__lk-svg')) {
+      if (burger.classList.contains('header__burger--open')) {
+        burger.classList.remove('header__burger--open')
+        headerNav.classList.remove('header__nav--open')
+        userIcon.classList.remove('header__lk-svg--open')
+        body.classList.remove('body-mob-open')
+      } else if (burger.classList.contains('header__burger')) {
+        burger.classList.add('header__burger--open')
+        headerNav.classList.add('header__nav--open')
+        userIcon.classList.add('header__lk-svg--open')
+        body.classList.add('body-mob-open')
+      }
+    } else {
+      if (burger.classList.contains('header__burger--open')) {
+        burger.classList.remove('header__burger--open')
+        headerNav.classList.remove('header__nav--open')
+        body.classList.remove('body-mob-open')
+      } else if (burger.classList.contains('header__burger')) {
+        burger.classList.add('header__burger--open')
+        headerNav.classList.add('header__nav--open')
+        body.classList.add('body-mob-open')
+      }
     }
   })
 }
@@ -405,7 +588,6 @@ const tabTrainPage = () => {
 tabTrainPage();
 
 //изменение количества звёзд
-
 const trainStar = () => {
   let trainReviewsStar = document.querySelectorAll('.train-reviews__star');
   let trainReviewsNum = document.querySelectorAll('.train-reviews__star-num');

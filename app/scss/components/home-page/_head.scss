@@ -17,14 +17,6 @@
     background-image: url('../images/icons/close-burger.svg');
   }
 
-  .top__inner {
-    display: none;
-  }
-
-  .top__inner--active {
-    display: none;
-  }
-
   border-bottom-left-radius: 100px;
   background-image: url('../images/head-bg.png');
   background-size: 100% 750px;
@@ -59,11 +51,32 @@
 
   &__header {
     padding: 40px 0;
+    height: 120px;
     z-index: 10;
     border-bottom: 1px dashed #ffffff;
 
     @include for-470-px {
       padding: 30px 0 25px;
+      height: auto;
+    }
+  }
+
+  &__header--search-show {
+    .head__search {
+      display: flex;
+    }
+
+    .logo,
+    .head__search-btn--mobile {
+      display: none;
+    }
+
+    .header__top {
+      width: 100%;
+    }
+
+    .head__search {
+      max-width: 100%;
     }
   }
 
@@ -87,6 +100,10 @@
     }
   }
 
+  &__search--desktop {
+    display: flex;
+  }
+
   &__search-btn--mobile {
     width: 20px;
     height: 23px;
@@ -108,6 +125,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    @include for-470-px {
+      width: 14px;
+      height: 14px;
+    }
   }
 
   &__search-btn {
@@ -119,6 +141,12 @@
     text-transform: uppercase;
     color: $btn;
     background-color: #ffffff;
+
+    @include for-470-px {
+      height: 28px;
+      padding: 8px 18px;
+      font-size: 12px;
+    }
   }
 
   &__search-input {
@@ -137,6 +165,10 @@
       font-size: 12px;
       line-height: 14px;
       letter-spacing: 1.2px;
+    }
+
+    @include for-470-px {
+      padding: 6px 15px 6px 40px;
     }
   }
 

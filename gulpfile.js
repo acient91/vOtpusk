@@ -47,7 +47,6 @@ function scripts() {
       'node_modules/jquery-ui/ui/widgets/datepicker.js',
       'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
       'app/js/tickets-search-one.js',
-      'app/js/station.js',
       'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))
