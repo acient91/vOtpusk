@@ -75,6 +75,13 @@
     border-radius: 0 50px;
     overflow: hidden;
     margin-bottom: 20px;
+    display: block;
+    transition: all .3s ease;
+  }
+
+  &__item--hidden {
+    transition: all .3s ease;
+    display: none;
   }
 
   &__avatar {
@@ -190,7 +197,8 @@
     }
   }
 
-  &__still {
+  &__still,
+  &__still-remove {
     padding-right: 35px;
     color: $link;
     text-decoration: underline;
@@ -222,6 +230,14 @@
       padding-right: 20px;
       margin-bottom: 30px;
     }
+  }
+
+  &__still-remove {
+    max-width: 100px;
+  }
+
+  &__still--hide {
+    display: none;
   }
 
   &__info {

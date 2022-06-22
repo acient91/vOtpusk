@@ -34,6 +34,16 @@
     display: block;
   }
 
+  &__false {
+    @extend %Roboto-900;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  &__false-btn {
+    color: $link;
+  }
+
   &__title {
     margin-bottom: 30px;
     text-align: left;

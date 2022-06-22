@@ -1,5 +1,42 @@
-const reviesList = document.querySelectorAll('.train-reviews__item');
 const body = document.querySelector('body');
+//отображение отзывов
+if (document.querySelector('.train-reviews__still')) {
+
+  const showBtnAdd = document.querySelector('.train-reviews__still');
+  const showBtnHide = document.querySelector('.train-reviews__still-remove');
+
+  const reviewsShow = () => {
+    showBtnHide.classList.add('train-reviews__still--hide');
+    let reviewsList = document.querySelectorAll('.train-reviews__item');
+    if (reviewsList.length > 3) {
+      for (let i = 3; i < reviewsList.length; i++) {
+        reviewsList[i].classList.add('train-reviews__item--hidden')
+      }
+    } else {
+      showBtnAdd.classList.add('train-reviews__still--hide');
+    }
+  }
+
+  function addReviews() {
+    let reviesHidden = [...document.querySelectorAll('.train-reviews__item--hidden')].slice(0, 3);
+    reviesHidden.forEach(item => item.classList.remove('train-reviews__item--hidden'));
+  }
+
+  showBtnAdd.addEventListener('click', function () {
+    addReviews();
+    let reviesHidden = document.querySelectorAll('.train-reviews__item--hidden');
+    if (reviesHidden.length == 0) {
+      showBtnAdd.classList.add('train-reviews__still--hide')
+      showBtnHide.classList.remove('train-reviews__still--hide')
+    }
+  })
+
+  reviewsShow();
+  showBtnHide.addEventListener('click', () => {
+    showBtnAdd.classList.remove('train-reviews__still--hide')
+    reviewsShow();
+  })
+}
 
 //мобильное меню
 const menuTitle = () => {
@@ -118,51 +155,6 @@ const scrollMenu = () => {
       };
     });
   }
-
-  //   const btnInnerOffsetTop = btnInner.offsetTop;
-
-  // window.addEventListener('scroll', () => {
-  //   let scrollDistance = window.scrollY;
-
-  //   if (scrollDistance > btnInnerOffsetTop) {
-  //     topInner.classList.add('top__inner--active');
-  //   } else if (scrollDistance < btnInnerOffsetTop) {
-  //     topInner.classList.remove('top__inner--active');
-  //   }
-
-  //   if (timetable.offsetTop - btnInner.clientHeight <= scrollDistance) {
-  //     topBtn.forEach((el) => {
-  //       if (el.classList.contains('top__buttons-btn--active')) {
-  //         el.classList.remove('top__buttons-btn--active');
-  //       }
-  //     });
-  //     topBtn[0].classList.add('top__buttons-btn--active');
-  //   };
-  //   if (hotel.offsetTop - btnInner.clientHeight <= scrollDistance) {
-  //     topBtn.forEach((el) => {
-  //       if (el.classList.contains('top__buttons-btn--active')) {
-  //         el.classList.remove('top__buttons-btn--active');
-  //       }
-  //     });
-  //     topBtn[1].classList.add('top__buttons-btn--active');
-  //   };
-  //   if (transfer.offsetTop - btnInner.clientHeight <= scrollDistance) {
-  //     topBtn.forEach((el) => {
-  //       if (el.classList.contains('top__buttons-btn--active')) {
-  //         el.classList.remove('top__buttons-btn--active');
-  //       }
-  //     });
-  //     topBtn[2].classList.add('top__buttons-btn--active');
-  //   };
-  //   if (reviews.offsetTop - btnInner.clientHeight <= scrollDistance) {
-  //     topBtn.forEach((el) => {
-  //       if (el.classList.contains('top__buttons-btn--active')) {
-  //         el.classList.remove('top__buttons-btn--active');
-  //       }
-  //     });
-  //     topBtn[3].classList.add('top__buttons-btn--active');
-  //   };
-  // });
 };
 scrollMenu();
 
@@ -549,6 +541,8 @@ const tabTimetable = () => {
   const timetableBtn = document.querySelectorAll('.timetable__btn');
   const timetableContent = document.querySelectorAll('.timetable__inner');
 
+  const falseBtn = document.querySelector('.timetable__false-btn');
+
   timetableBtn.forEach((item, i) => {
     item.addEventListener('click', function (e) {
       e.preventDefault();
@@ -562,6 +556,14 @@ const tabTimetable = () => {
       };
     })
   })
+  if (document.querySelector('.timetable__false-btn')) {
+    falseBtn.addEventListener('click', () => {
+      timetableContent[0].classList.add('timetable__inner--active');
+      timetableBtn[0].classList.add('timetable__btn--active');
+      timetableContent[1].classList.remove('timetable__inner--active');
+      timetableBtn[1].classList.remove('timetable__btn--active');
+    })
+  }
 }
 tabTimetable();
 
