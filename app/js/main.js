@@ -1,4 +1,8 @@
 const body = document.querySelector('body');
+
+const calendarShow = () => {
+  // search__booking-input--datelast
+}
 //отображение отзывов
 if (document.querySelector('.train-reviews__still')) {
 
@@ -742,21 +746,22 @@ $(function () {
     },
   });
 
-  $(".search__booking-input--date").datepicker({
-    language: ['ru'],
-    dayNames: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
-    dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
-    monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
-    prevText: '',
-    nextText: '',
-    showOtherMonths: true,
-    firstDay: 1,
-    numberOfMonths: 2,
-    dateFormat: 'DD, d.mm.yy',
-    beforeShow(input) {
-      document.querySelector('#ui-datepicker-div').classList.add('search__booking-calendar');
-    },
-  });
+  $(".search__booking-input--date")
+    .datepicker({
+      language: ['ru'],
+      dayNames: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+      dayNamesMin: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+      monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+      prevText: '',
+      nextText: '',
+      showOtherMonths: true,
+      firstDay: 1,
+      numberOfMonths: 2,
+      dateFormat: 'DD, d.mm.yy',
+      beforeShow(input) {
+        document.querySelector('#ui-datepicker-div').classList.add('search__booking-calendar');
+      }
+    });
   $(".search__mobile-input--route").datepicker({
     language: ['ru'],
     dayNames: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],

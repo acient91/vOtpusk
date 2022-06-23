@@ -53,8 +53,111 @@
               <img class="logo__img" src="images/logo.png" alt="Логотип компании">
               <span class="head__logo-text">ЖД билеты</span>
             </a>
+            <nav class="header__nav">
+              <div class="header__nav-inner">
+                <div class="header__nav-item">
+                  <p class="header__nav-title">
+                    Готовые туры
+                  </p>
+                  <div class="header__nav-box">
+                    <a class="header__nav-link" href="#">
+                      Поиск и покупка туров
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Виды туров
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Популярные страны
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Туры по России
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Круизы
+                    </a>
+                  </div>
+                </div>
+                <div class="header__nav-item">
+                  <p class="header__nav-title">
+                    Едем сами
+                  </p>
+                  <div class="header__nav-box">
+                    <a class="header__nav-link" href="#">
+                      Маршруты
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Купить on-line
+                    </a>
+                  </div>
+                </div>
+                <div class="header__nav-item">
+                  <p class="header__nav-title">
+                    Путеводитель
+                  </p>
+                  <div class="header__nav-box">
+                    <a class="header__nav-link" href="#">
+                      Страны
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Города, курорты
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Достопримечательности
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Отели
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Вопросы
+                    </a>
+                  </div>
+                </div>
+                <div class="header__nav-item">
+                  <p class="header__nav-title">
+                    Информация
+                  </p>
+                  <div class="header__nav-box">
+                    <a class="header__nav-link" href="#">
+                      Новости
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Статьи
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Фоторепортажи
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Погода
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Справочник
+                    </a>
+                  </div>
+                </div>
+                <div class="header__nav-item">
+                  <p class="header__nav-title">
+                    B2B
+                  </p>
+                  <div class="header__nav-box">
+                    <a class="header__nav-link" href="#">
+                      Турбизнес
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Турфирмы
+                    </a>
+                    <a class="header__nav-link" href="#">
+                      Сайты
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="header__search-mob ">
+                <input class="header__search-input-mob" type="text" placeholder="Поиск по сайту">
+                <button class="header__search-btn-mob" type="submit">Найти</button>
+              </div>
+            </nav>
             <div class="header__top">
-              <div class="head__search head__search--open">
+              <div class="head__search">
                 <input class="head__search-input" type="text" placeholder="Поиск по сайту">
                 <button class="head__search-btn" type="submit">Найти</button>
               </div>
@@ -65,7 +168,8 @@
               <div class="header__users">
                 <div class="header__lk">
                   <a class="header__lk-link" href="#">
-                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="header__lk-svg" width="23" height="24" viewBox="0 0 23 24" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M8.1075 12.1217C3.41397 13.5679 0 17.935 0 23.0917C0 23.5141 0.343467 23.8569 0.766667 23.8569C1.18987 23.8569 1.53333 23.5141 1.53333 23.0917C1.53333 17.6013 5.99917 13.144 11.5 13.144C17.0008 13.144 21.4667 17.6013 21.4667 23.0917C21.4667 23.5141 21.8101 23.8569 22.2333 23.8569C22.6565 23.8569 23 23.5141 23 23.0917C23 17.935 19.586 13.5679 14.8925 12.1217C16.5439 11.0252 17.6333 9.14966 17.6333 7.02239C17.6333 3.64401 14.8848 0.900757 11.5 0.900757C8.11517 0.900757 5.36667 3.64401 5.36667 7.02239C5.36667 9.14966 6.4561 11.0252 8.1075 12.1217ZM11.5 2.43116C14.0384 2.43116 16.1 4.4888 16.1 7.02239C16.1 9.55598 14.0384 11.6136 11.5 11.6136C8.96157 11.6136 6.9 9.55598 6.9 7.02239C6.9 4.4888 8.96157 2.43116 11.5 2.43116Z"
                         fill="white" />
@@ -76,7 +180,8 @@
                   <a class="header__modal-link" href="#">Тарифы</a>
                   <a class="header__modal-link" href="#">Аренда жилья</a>
                 </div>
-                <button class="head__lk-btn"></button>
+                <button class="header__burger">
+                </button>
               </div>
             </div>
           </div>
@@ -304,7 +409,7 @@
           </div>
         </div>
       </div>
-      <div class="top__inner">
+      <!-- <div class="top__inner">
         <div class="breadcrumbs">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
@@ -341,7 +446,7 @@
           <a class="top__buttons-btn" href="#transfer">Трансферы</a>
           <a class="top__buttons-btn" href="#reviews">Отзывы</a>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <section class="head-info">
@@ -522,7 +627,8 @@
                   <p>
                     Чем понравился сервис оперативно, четко, легко разобраться. Я вообще люблю, когда все варианты в
                     одном
-                    месте. Искала недорогой хостел для летнего отпуска.. Выбирала минут 10 и забронила чудесную комнат))
+                    месте. Искала недорогой хостел для летнего отпуска.. Выбирала минут 10 и забронила чудесную
+                    комнату)) Lorem, ipsum.
                   </p>
                 </div>
               </li>
